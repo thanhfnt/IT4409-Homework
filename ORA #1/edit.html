@@ -3,15 +3,651 @@
 <head>
     <meta charset="UTF-8">
     <title>CTTBK • update Student Profile</title>
-    <link rel="stylesheet" href="./bootstrap.min.css">
-    <link rel="stylesheet" href="./bootstrap-combobox.css">
-    <link rel="stylesheet" href="./docs.min.css">
-    <link rel="stylesheet" type="text/css" href="index.css"/>
-    <script src="save.js"></script>
+    <link rel="stylesheet" href="CSS/bootstrap.min.css">
+    <link rel="stylesheet" href="CSS/bootstrap-combobox.css">
+    <link rel="stylesheet" href="CSS/docs.min.css">
+    <link rel="stylesheet" type="text/css" href="CSS/index.css"/>
+    <link rel="stylesheet" type="text/css" href="CSS/plus.css"/>
+    <script src="JS/save.js"></script>
 </head>
-<body>
+<body onload="loadDataForEdit()">
 
 <div>
+
+
+    <script src="JS/WebResource.js" type="text/javascript"></script>
+    <script src="JS/DXR.js" type="text/javascript"></script>
+    <div id="ctl00_ctl00_HeaderPane_EB" class="dxpnl-bar dxpnlControl_Mulberry headerPane"
+         style="width:100%;padding: 0;">
+        <div class="dxpnl-bar-tmpl dxpnl-np">
+
+            <div style="height:50px">
+                <a href="javascript:void(0)">
+                    <img class="dxeImage_Mulberry" id="ctl00_ctl00_HeaderPane_EBT_imgLogo"
+                         src="Images/logo-cttdt.png" alt="" style="height:100%;">
+                </a>
+            </div>
+
+        </div>
+    </div>
+    <div class="dxpnlControl_Mulberry" id="ctl00_ctl00_HeaderPane">
+        <div class="dxpnl-acc">
+
+            <div class="headerPane">
+                <div class="container">
+                    <a href="javascript:void(0)">
+                        <img class="dxeImage_Mulberry" id="ctl00_ctl00_HeaderPane_imgLogo"
+                             src="Images/logo-cttdt.png" alt="" style="height:100%;">
+                    </a>
+                </div>
+            </div>
+
+        </div>
+    </div>
+    <script id="dxss_1124381250" type="text/javascript" data-executed="true">
+        ASPx.AddSelectedItems('ctl00_ctl00_HeaderPane', [[['dxpnl-expanded'], [''], ['', 'EB']]]);
+        ASPx.createControl(ASPxClientPanel, 'ctl00_ctl00_HeaderPane', '', {
+            'uniqueID': 'ctl00$ctl00$HeaderPane',
+            'collapseWindowWidth': 600,
+            'animationType': 'slide'
+        });
+    </script>
+    <div id="ctl00_ctl00_TopMenuPane_EB" class="dxpnl-bar dxpnlControl_Mulberry topMenuExpandBar">
+        <div id="ctl00_ctl00_TopMenuPane_EBB" class="dxpnl-btn dxpnl-fp">
+            <img id="ctl00_ctl00_TopMenuPane_EBBI" class="dxWeb_pnlExpand_Mulberry"
+                 src="Images/01.gif" alt="">
+        </div>
+    </div>
+    <div class="dxpnlControl_Mulberry topMenu" id="ctl00_ctl00_TopMenuPane">
+        <div class="dxpnl-acc">
+            <div class="dxpnl-cc">
+
+                <div class="dxmLite_Mulberry dxm-ltr">
+                    <div class="dxm-main dxm-horizontal dxm-autoWidth dxm-noWrap" id="ctl00_ctl00_TopMenuPane_menuTop"
+                         style="width: 100%;">
+                        <ul class="dx dxm-image-l" style="width: 100%;">
+                            <li class="dxm-item dxm-subMenu" style="font-size: medium; min-width: 45px; width: 25%;"
+                                id="ctl00_ctl00_TopMenuPane_menuTop_DXI0_" savedwidth="[object Object]">
+                                <div class="dxm-content dxm-hasText" id="ctl00_ctl00_TopMenuPane_menuTop_DXI0_T"
+                                     savedpadding-left="[object Object]" savedpadding-right="[object Object]"
+                                     style="float: none; padding-left: 7px; padding-right: 21px;">
+                                    <img class="dxIcon_arrange_sendbackward_16x16 dxm-image dx-vam"
+                                         src="Images/01.gif" alt=""
+                                         id="ctl00_ctl00_TopMenuPane_menuTop_DXI0_Img"><span class="dx-vam">Đào tạo Đại học</span>
+                                </div>
+                                <div class="dxm-popOut" id="ctl00_ctl00_TopMenuPane_menuTop_DXI0_P"
+                                     style="display: block; margin-top: -28px; height: 21.6375px;"
+                                     savedmargin-top="[object Object]">
+                                    <img class="dxWeb_mHorizontalPopOut_Mulberry dxm-pImage"
+                                         src="Images/01.gif" alt="v"
+                                         id="ctl00_ctl00_TopMenuPane_menuTop_DXI0_PImg" style="margin-top: 8.81875px;">
+                                </div>
+                            </li>
+                            <li class="dxm-spacing" id="ctl00_ctl00_TopMenuPane_menuTop_DXI1_II"
+                                style="height: 27.6375px;" savedheight="[object Object]"></li>
+                            <li class="dxm-item dxm-subMenu" style="font-size: medium; min-width: 45px; width: 25%;"
+                                id="ctl00_ctl00_TopMenuPane_menuTop_DXI1_" savedwidth="[object Object]">
+                                <div class="dxm-content dxm-hasText" id="ctl00_ctl00_TopMenuPane_menuTop_DXI1_T"
+                                     savedpadding-left="[object Object]" savedpadding-right="[object Object]"
+                                     style="float: none; padding-left: 7px; padding-right: 21px;">
+                                    <img class="dxIcon_arrange_sendbackward_16x16 dxm-image dx-vam"
+                                         src="Images/01.gif" alt=""
+                                         id="ctl00_ctl00_TopMenuPane_menuTop_DXI1_Img"><span class="dx-vam">Đào tạo Sau đại học</span>
+                                </div>
+                                <div class="dxm-popOut" id="ctl00_ctl00_TopMenuPane_menuTop_DXI1_P"
+                                     style="display: block; margin-top: -28px; height: 21.6375px;"
+                                     savedmargin-top="[object Object]">
+                                    <img class="dxWeb_mHorizontalPopOut_Mulberry dxm-pImage"
+                                         src="Images/01.gif" alt="v"
+                                         id="ctl00_ctl00_TopMenuPane_menuTop_DXI1_PImg" style="margin-top: 8.81875px;">
+                                </div>
+                            </li>
+                            <li class="dxm-spacing" id="ctl00_ctl00_TopMenuPane_menuTop_DXI2_II"
+                                style="height: 27.6375px;" savedheight="[object Object]"></li>
+                            <li class="dxm-item dxm-subMenu" style="font-size: medium; min-width: 45px; width: 25%;"
+                                id="ctl00_ctl00_TopMenuPane_menuTop_DXI2_" savedwidth="[object Object]">
+                                <div class="dxm-content dxm-hasText" id="ctl00_ctl00_TopMenuPane_menuTop_DXI2_T"
+                                     savedpadding-left="[object Object]" savedpadding-right="[object Object]"
+                                     style="float: none; padding-left: 7px; padding-right: 21px;">
+                                    <img class="dxIcon_arrange_sendbackward_16x16 dxm-image dx-vam"
+                                         src="Images/01.gif" alt=""
+                                         id="ctl00_ctl00_TopMenuPane_menuTop_DXI2_Img"><span class="dx-vam">Công tác Sinh viên</span>
+                                </div>
+                                <div class="dxm-popOut" id="ctl00_ctl00_TopMenuPane_menuTop_DXI2_P"
+                                     style="display: block; margin-top: -28px; height: 21.6375px;"
+                                     savedmargin-top="[object Object]">
+                                    <img class="dxWeb_mHorizontalPopOut_Mulberry dxm-pImage"
+                                         src="Images/01.gif" alt="v"
+                                         id="ctl00_ctl00_TopMenuPane_menuTop_DXI2_PImg" style="margin-top: 8.81875px;">
+                                </div>
+                            </li>
+                            <li class="dxm-spacing" id="ctl00_ctl00_TopMenuPane_menuTop_DXI3_II"
+                                style="height: 27.6375px;" savedheight="[object Object]"></li>
+                            <li class="dxm-item dxm-noSubMenu" id="ctl00_ctl00_TopMenuPane_menuTop_DXI3_"
+                                style="min-width: 45px; width: 25%;" savedwidth="[object Object]"><a
+                                    class="dxm-content dxm-hasText dx"
+                                    href="javascript:void(0)"
+                                    style="font-size: medium; float: none;" id="ctl00_ctl00_TopMenuPane_menuTop_DXI3_T"><img
+                                    class="dxIcon_arrange_sendbackward_16x16 dxm-image dx-vam"
+                                    src="Images/01.gif" alt=""
+                                    id="ctl00_ctl00_TopMenuPane_menuTop_DXI3_Img"><span
+                                    class="dx-vam">Tra cứu văn bằng</span></a></li>
+                            <li class="dxm-spacing dxm-amis" id="ctl00_ctl00_TopMenuPane_menuTop_DXI4_II"
+                                style="display: none; height: 27.6375px;" savedheight="[object Object]"></li>
+                            <li class="dxm-item dxm-dropDownMode dxm-noImage dxm-ami"
+                                style="font-size: medium; display: none;" id="ctl00_ctl00_TopMenuPane_menuTop_DXI4_">
+                                <div class="dxm-content dxm-hasText" id="ctl00_ctl00_TopMenuPane_menuTop_DXI4_T">
+                                    <span class="dx-vam">Item</span>
+                                </div>
+                                <div class="dxm-popOut" id="ctl00_ctl00_TopMenuPane_menuTop_DXI4_P"
+                                     style="display: block;">
+                                    <img class="dxWeb_mAdaptiveMenu_Mulberry dxm-pImage"
+                                         src="Images/01.gif" alt="..."
+                                         id="ctl00_ctl00_TopMenuPane_menuTop_DXI4_PImg">
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                    <b class="dx-clear"></b>
+                    <div id="ctl00_ctl00_TopMenuPane_menuTop_DXM0_"
+                         style="z-index: 20002; display: none; position: absolute;">
+                        <div class="dxm-shadow dxm-popup" style="font-size:Medium;"
+                             id="ctl00_ctl00_TopMenuPane_menuTop_DXME0_">
+                            <ul class="dx dxm-noImages dxm-gutter">
+                                <li class="dxm-item" id="ctl00_ctl00_TopMenuPane_menuTop_DXI0i0_"><a
+                                        class="dxm-content dxm-hasText dx"
+                                        href="javascript:void(0)"
+                                        style="font-size:Medium;" id="ctl00_ctl00_TopMenuPane_menuTop_DXI0i0_T"><span
+                                        class="dx-vam">Quy định - Quy chế</span></a><b class="dx-clear"></b></li>
+                                <li class="dxm-spacing" id="ctl00_ctl00_TopMenuPane_menuTop_DXI0i1_II"></li>
+                                <li class="dxm-item" id="ctl00_ctl00_TopMenuPane_menuTop_DXI0i1_"><a
+                                        class="dxm-content dxm-hasText dx"
+                                        href="javascript:void(0)"
+                                        style="font-size:Medium;" id="ctl00_ctl00_TopMenuPane_menuTop_DXI0i1_T"><span
+                                        class="dx-vam">Các ngành đào tạo</span></a><b class="dx-clear"></b></li>
+                                <li class="dxm-spacing" id="ctl00_ctl00_TopMenuPane_menuTop_DXI0i2_II"></li>
+                                <li class="dxm-item" id="ctl00_ctl00_TopMenuPane_menuTop_DXI0i2_"><a
+                                        class="dxm-content dxm-hasText dx"
+                                        href="javascript:void(0)"
+                                        style="font-size:Medium;" id="ctl00_ctl00_TopMenuPane_menuTop_DXI0i2_T"><span
+                                        class="dx-vam">Kế hoạch học tập</span></a><b class="dx-clear"></b></li>
+                                <li class="dxm-spacing" id="ctl00_ctl00_TopMenuPane_menuTop_DXI0i3_II"></li>
+                                <li class="dxm-item" id="ctl00_ctl00_TopMenuPane_menuTop_DXI0i3_"><a
+                                        class="dxm-content dxm-hasText dx"
+                                        href="javascript:void(0)"
+                                        style="font-size:Medium;" id="ctl00_ctl00_TopMenuPane_menuTop_DXI0i3_T"><span
+                                        class="dx-vam">Tin tức - Thông báo</span></a><b class="dx-clear"></b></li>
+                                <li class="dxm-spacing" id="ctl00_ctl00_TopMenuPane_menuTop_DXI0i4_II"></li>
+                                <li class="dxm-item" id="ctl00_ctl00_TopMenuPane_menuTop_DXI0i4_"><a
+                                        class="dxm-content dxm-hasText dx"
+                                        href="javascript:void(0)"
+                                        style="font-size:Medium;" id="ctl00_ctl00_TopMenuPane_menuTop_DXI0i4_T"><span
+                                        class="dx-vam">Thông tin văn bằng 2</span></a><b class="dx-clear"></b></li>
+                                <li class="dxm-spacing" id="ctl00_ctl00_TopMenuPane_menuTop_DXI0i5_II"></li>
+                                <li class="dxm-item" id="ctl00_ctl00_TopMenuPane_menuTop_DXI0i5_"><a
+                                        class="dxm-content dxm-hasText dx"
+                                        href="javascript:void(0)"
+                                        style="font-size:Medium;" id="ctl00_ctl00_TopMenuPane_menuTop_DXI0i5_T"><span
+                                        class="dx-vam">Chương trình đặc biệt</span></a><b class="dx-clear"></b></li>
+                                <li class="dxm-spacing" id="ctl00_ctl00_TopMenuPane_menuTop_DXI0i6_II"></li>
+                                <li class="dxm-item" id="ctl00_ctl00_TopMenuPane_menuTop_DXI0i6_"><a
+                                        class="dxm-content dxm-hasText dx"
+                                        href="javascript:void(0)"
+                                        style="font-size:Medium;" id="ctl00_ctl00_TopMenuPane_menuTop_DXI0i6_T"><span
+                                        class="dx-vam">Biểu mẫu</span></a><b class="dx-clear"></b></li>
+                                <li class="dxm-spacing" id="ctl00_ctl00_TopMenuPane_menuTop_DXI0i7_II"></li>
+                                <li class="dxm-item" id="ctl00_ctl00_TopMenuPane_menuTop_DXI0i7_"><a
+                                        class="dxm-content dxm-hasText dx"
+                                        href="javascript:void(0)"
+                                        style="font-size:Medium;" id="ctl00_ctl00_TopMenuPane_menuTop_DXI0i7_T"><span
+                                        class="dx-vam">Liên hệ</span></a><b class="dx-clear"></b></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div id="ctl00_ctl00_TopMenuPane_menuTop_DXM1_"
+                         style="z-index: 20002; display: none; position: absolute;">
+                        <div class="dxm-shadow dxm-popup" style="font-size:Medium;"
+                             id="ctl00_ctl00_TopMenuPane_menuTop_DXME1_">
+                            <ul class="dx dxm-noImages dxm-gutter">
+                                <li class="dxm-item" id="ctl00_ctl00_TopMenuPane_menuTop_DXI1i0_"><a
+                                        class="dxm-content dxm-hasText dx"
+                                        href="javascript:void(0)"
+                                        style="font-size:Medium;" id="ctl00_ctl00_TopMenuPane_menuTop_DXI1i0_T"><span
+                                        class="dx-vam">Tuyển sinh</span></a><b class="dx-clear"></b></li>
+                                <li class="dxm-spacing" id="ctl00_ctl00_TopMenuPane_menuTop_DXI1i1_II"></li>
+                                <li class="dxm-item" id="ctl00_ctl00_TopMenuPane_menuTop_DXI1i1_"><a
+                                        class="dxm-content dxm-hasText dx"
+                                        href="javascript:void(0)"
+                                        style="font-size:Medium;" id="ctl00_ctl00_TopMenuPane_menuTop_DXI1i1_T"><span
+                                        class="dx-vam">Đào tạo</span></a><b class="dx-clear"></b></li>
+                                <li class="dxm-spacing" id="ctl00_ctl00_TopMenuPane_menuTop_DXI1i2_II"></li>
+                                <li class="dxm-item" id="ctl00_ctl00_TopMenuPane_menuTop_DXI1i2_"><a
+                                        class="dxm-content dxm-hasText dx"
+                                        href="javascript:void(0)"
+                                        style="font-size:Medium;" id="ctl00_ctl00_TopMenuPane_menuTop_DXI1i2_T"><span
+                                        class="dx-vam">Mẫu văn bản giấy tờ</span></a><b class="dx-clear"></b></li>
+                                <li class="dxm-spacing" id="ctl00_ctl00_TopMenuPane_menuTop_DXI1i3_II"></li>
+                                <li class="dxm-item" id="ctl00_ctl00_TopMenuPane_menuTop_DXI1i3_"><a
+                                        class="dxm-content dxm-hasText dx"
+                                        href="javascript:void(0)"
+                                        style="font-size:Medium;" id="ctl00_ctl00_TopMenuPane_menuTop_DXI1i3_T"><span
+                                        class="dx-vam">Văn bản - Quy chế</span></a><b class="dx-clear"></b></li>
+                                <li class="dxm-spacing" id="ctl00_ctl00_TopMenuPane_menuTop_DXI1i4_II"></li>
+                                <li class="dxm-item" id="ctl00_ctl00_TopMenuPane_menuTop_DXI1i4_"><a
+                                        class="dxm-content dxm-hasText dx"
+                                        href="javascript:void(0)"
+                                        style="font-size:Medium;" id="ctl00_ctl00_TopMenuPane_menuTop_DXI1i4_T"><span
+                                        class="dx-vam">Thông tin văn bằng</span></a><b class="dx-clear"></b></li>
+                                <li class="dxm-spacing" id="ctl00_ctl00_TopMenuPane_menuTop_DXI1i5_II"></li>
+                                <li class="dxm-item" id="ctl00_ctl00_TopMenuPane_menuTop_DXI1i5_"><a
+                                        class="dxm-content dxm-hasText dx"
+                                        href="javascript:void(0)"
+                                        style="font-size:Medium;" id="ctl00_ctl00_TopMenuPane_menuTop_DXI1i5_T"><span
+                                        class="dx-vam">Trang thông tin cá nhân</span></a><b class="dx-clear"></b></li>
+                                <li class="dxm-spacing" id="ctl00_ctl00_TopMenuPane_menuTop_DXI1i6_II"></li>
+                                <li class="dxm-item" id="ctl00_ctl00_TopMenuPane_menuTop_DXI1i6_"><a
+                                        class="dxm-content dxm-hasText dx"
+                                        href="javascript:void(0)"
+                                        style="font-size:Medium;" id="ctl00_ctl00_TopMenuPane_menuTop_DXI1i6_T"><span
+                                        class="dx-vam">Liên hệ</span></a><b class="dx-clear"></b></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div id="ctl00_ctl00_TopMenuPane_menuTop_DXM2_"
+                         style="z-index: 20002; display: none; position: absolute;">
+                        <div class="dxm-shadow dxm-popup" style="font-size:Medium;"
+                             id="ctl00_ctl00_TopMenuPane_menuTop_DXME2_">
+                            <ul class="dx dxm-noImages dxm-gutter">
+                                <li class="dxm-item" id="ctl00_ctl00_TopMenuPane_menuTop_DXI2i0_"><a
+                                        class="dxm-content dxm-hasText dx"
+                                        href="javascript:void(0)"
+                                        style="font-size:Medium;" id="ctl00_ctl00_TopMenuPane_menuTop_DXI2i0_T"><span
+                                        class="dx-vam">Thông báo</span></a><b class="dx-clear"></b></li>
+                                <li class="dxm-spacing" id="ctl00_ctl00_TopMenuPane_menuTop_DXI2i1_II"></li>
+                                <li class="dxm-item" id="ctl00_ctl00_TopMenuPane_menuTop_DXI2i1_"><a
+                                        class="dxm-content dxm-hasText dx"
+                                        href="javascript:void(0)"
+                                        style="font-size:Medium;" id="ctl00_ctl00_TopMenuPane_menuTop_DXI2i1_T"><span
+                                        class="dx-vam">Hỏi - Đáp</span></a><b class="dx-clear"></b></li>
+                                <li class="dxm-spacing" id="ctl00_ctl00_TopMenuPane_menuTop_DXI2i2_II"></li>
+                                <li class="dxm-item" id="ctl00_ctl00_TopMenuPane_menuTop_DXI2i2_"><a
+                                        class="dxm-content dxm-hasText dx"
+                                        href="javascript:void(0)"
+                                        style="font-size:Medium;" id="ctl00_ctl00_TopMenuPane_menuTop_DXI2i2_T"><span
+                                        class="dx-vam">Học phí</span></a><b class="dx-clear"></b></li>
+                                <li class="dxm-spacing" id="ctl00_ctl00_TopMenuPane_menuTop_DXI2i3_II"></li>
+                                <li class="dxm-item" id="ctl00_ctl00_TopMenuPane_menuTop_DXI2i3_"><a
+                                        class="dxm-content dxm-hasText dx"
+                                        href="javascript:void(0)"
+                                        style="font-size:Medium;" id="ctl00_ctl00_TopMenuPane_menuTop_DXI2i3_T"><span
+                                        class="dx-vam">Học bổng tài trợ</span></a><b class="dx-clear"></b></li>
+                                <li class="dxm-spacing" id="ctl00_ctl00_TopMenuPane_menuTop_DXI2i4_II"></li>
+                                <li class="dxm-item" id="ctl00_ctl00_TopMenuPane_menuTop_DXI2i4_"><a
+                                        class="dxm-content dxm-hasText dx"
+                                        href="javascript:void(0)"
+                                        style="font-size:Medium;" id="ctl00_ctl00_TopMenuPane_menuTop_DXI2i4_T"><span
+                                        class="dx-vam">Việc làm</span></a><b class="dx-clear"></b></li>
+                                <li class="dxm-spacing" id="ctl00_ctl00_TopMenuPane_menuTop_DXI2i5_II"></li>
+                                <li class="dxm-item" id="ctl00_ctl00_TopMenuPane_menuTop_DXI2i5_"><a
+                                        class="dxm-content dxm-hasText dx"
+                                        href="javascript:void(0)"
+                                        style="font-size:Medium;" id="ctl00_ctl00_TopMenuPane_menuTop_DXI2i5_T"><span
+                                        class="dx-vam">Biểu mẫu</span></a><b class="dx-clear"></b></li>
+                                <li class="dxm-spacing" id="ctl00_ctl00_TopMenuPane_menuTop_DXI2i6_II"></li>
+                                <li class="dxm-item" id="ctl00_ctl00_TopMenuPane_menuTop_DXI2i6_"><a
+                                        class="dxm-content dxm-hasText dx"
+                                        href="javascript:void(0)"
+                                        style="font-size:Medium;" id="ctl00_ctl00_TopMenuPane_menuTop_DXI2i6_T"><span
+                                        class="dx-vam">Cựu sinh viên</span></a><b class="dx-clear"></b></li>
+                                <li class="dxm-spacing" id="ctl00_ctl00_TopMenuPane_menuTop_DXI2i7_II"></li>
+                                <li class="dxm-item" id="ctl00_ctl00_TopMenuPane_menuTop_DXI2i7_"><a
+                                        class="dxm-content dxm-hasText dx"
+                                        href="javascript:void(0)"
+                                        style="font-size:Medium;" id="ctl00_ctl00_TopMenuPane_menuTop_DXI2i7_T"><span
+                                        class="dx-vam">Liên hệ</span></a><b class="dx-clear"></b></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div id="ctl00_ctl00_TopMenuPane_menuTop_DXM4_"
+                         style="z-index: 20000; display: none; position: absolute;">
+                        <div class="dxm-shadow dxm-popup dxm-am" style="font-size:Medium;"
+                             id="ctl00_ctl00_TopMenuPane_menuTop_DXME4_">
+                            <ul class="dx dxm-gutter">
+
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <script id="dxss_162039307" type="text/javascript" data-executed="true">
+                    ASPx.AddHoverItems('ctl00_ctl00_TopMenuPane_menuTop', [[['dxm-hovered', '', ''], ['color:Beige;background-color:#8C1515;', '', ''], ['DXI0_', 'DXI1_', 'DXI2_', 'DXI4_'], ['', 'P', 'T']], [[''], [''], ['DXME0_', 'DXMBC0_', 'DXME1_', 'DXMBC1_', 'DXME2_', 'DXMBC2_', 'DXME4_', 'DXMBC4_']], [['dxm-hovered', ''], ['color:Beige;background-color:#8C1515;', ''], ['DXI0i0_', 'DXI0i1_', 'DXI0i2_', 'DXI0i3_', 'DXI0i4_', 'DXI0i5_', 'DXI0i6_', 'DXI0i7_', 'DXI1i0_', 'DXI1i1_', 'DXI1i2_', 'DXI1i3_', 'DXI1i4_', 'DXI1i5_', 'DXI1i6_', 'DXI2i0_', 'DXI2i1_', 'DXI2i2_', 'DXI2i3_', 'DXI2i4_', 'DXI2i5_', 'DXI2i6_', 'DXI2i7_', 'DXI3_'], ['', 'T']]]);
+                    ASPx.createControl(ASPxClientMenu, 'ctl00_ctl00_TopMenuPane_menuTop', '', {
+                        'uniqueID': 'ctl00$ctl00$TopMenuPane$menuTop',
+                        'renderData': {
+                            '': [[0], [1], [2], [3], [4]],
+                            '0': [[0], [1], [2], [3], [4], [5], [6], [7]],
+                            '1': [[0], [1], [2], [3], [4], [5], [6]],
+                            '2': [[0], [1], [2], [3], [4], [5], [6], [7]]
+                        },
+                        'subMenuFIXOffset': 1,
+                        'subMenuFIYOffset': -2,
+                        'subMenuLIXOffset': 1,
+                        'subMenuLIYOffset': -2,
+                        'subMenuXOffset': 1,
+                        'subMenuYOffset': -2
+                    }, null, null, {'adaptiveModeData': 4});
+
+                    //-->
+                </script>
+
+            </div>
+            <div class="dxpnl-expanded-tmpl">
+
+                <div class="dxmLite_Mulberry dxm-ltr">
+                    <div class="dxm-main dxm-vertical dxm-autoWidth dxm-noWrap"
+                         id="ctl00_ctl00_TopMenuPane_ctl10_menuTop" style="width:100%;">
+                        <ul class="dx dxm-image-l dxm-gutter">
+                            <li class="dxm-item dxm-subMenu" style="font-size:Medium;"
+                                id="ctl00_ctl00_TopMenuPane_ctl10_menuTop_DXI0_">
+                                <div class="dxm-content dxm-hasText" id="ctl00_ctl00_TopMenuPane_ctl10_menuTop_DXI0_T">
+                                    <img class="dxIcon_arrange_sendbackward_16x16 dxm-image dx-vam"
+                                         src="Images/01.gif" alt=""
+                                         id="ctl00_ctl00_TopMenuPane_ctl10_menuTop_DXI0_Img"><span class="dx-vam">Đào tạo Đại học</span>
+                                </div>
+                                <div class="dxm-popOut" id="ctl00_ctl00_TopMenuPane_ctl10_menuTop_DXI0_P">
+                                    <img class="dxWeb_mVerticalPopOut_Mulberry dxm-pImage"
+                                         src="Images/01.gif" alt="&gt;"
+                                         id="ctl00_ctl00_TopMenuPane_ctl10_menuTop_DXI0_PImg">
+                                </div>
+                                <b class="dx-clear"></b></li>
+                            <li class="dxm-spacing" id="ctl00_ctl00_TopMenuPane_ctl10_menuTop_DXI1_II"></li>
+                            <li class="dxm-item dxm-subMenu" style="font-size:Medium;"
+                                id="ctl00_ctl00_TopMenuPane_ctl10_menuTop_DXI1_">
+                                <div class="dxm-content dxm-hasText" id="ctl00_ctl00_TopMenuPane_ctl10_menuTop_DXI1_T">
+                                    <img class="dxIcon_arrange_sendbackward_16x16 dxm-image dx-vam"
+                                         src="Images/01.gif" alt=""
+                                         id="ctl00_ctl00_TopMenuPane_ctl10_menuTop_DXI1_Img"><span class="dx-vam">Đào tạo Sau đại học</span>
+                                </div>
+                                <div class="dxm-popOut" id="ctl00_ctl00_TopMenuPane_ctl10_menuTop_DXI1_P">
+                                    <img class="dxWeb_mVerticalPopOut_Mulberry dxm-pImage"
+                                         src="Images/01.gif" alt="&gt;"
+                                         id="ctl00_ctl00_TopMenuPane_ctl10_menuTop_DXI1_PImg">
+                                </div>
+                                <b class="dx-clear"></b></li>
+                            <li class="dxm-spacing" id="ctl00_ctl00_TopMenuPane_ctl10_menuTop_DXI2_II"></li>
+                            <li class="dxm-item dxm-subMenu" style="font-size:Medium;"
+                                id="ctl00_ctl00_TopMenuPane_ctl10_menuTop_DXI2_">
+                                <div class="dxm-content dxm-hasText" id="ctl00_ctl00_TopMenuPane_ctl10_menuTop_DXI2_T">
+                                    <img class="dxIcon_arrange_sendbackward_16x16 dxm-image dx-vam"
+                                         src="Images/01.gif" alt=""
+                                         id="ctl00_ctl00_TopMenuPane_ctl10_menuTop_DXI2_Img"><span class="dx-vam">Công tác Sinh viên</span>
+                                </div>
+                                <div class="dxm-popOut" id="ctl00_ctl00_TopMenuPane_ctl10_menuTop_DXI2_P">
+                                    <img class="dxWeb_mVerticalPopOut_Mulberry dxm-pImage"
+                                         src="Images/01.gif" alt="&gt;"
+                                         id="ctl00_ctl00_TopMenuPane_ctl10_menuTop_DXI2_PImg">
+                                </div>
+                                <b class="dx-clear"></b></li>
+                            <li class="dxm-spacing" id="ctl00_ctl00_TopMenuPane_ctl10_menuTop_DXI3_II"></li>
+                            <li class="dxm-item dxm-noSubMenu" id="ctl00_ctl00_TopMenuPane_ctl10_menuTop_DXI3_"><a
+                                    class="dxm-content dxm-hasText dx"
+                                    href="javascript:void(0)"
+                                    style="font-size:Medium;" id="ctl00_ctl00_TopMenuPane_ctl10_menuTop_DXI3_T"><img
+                                    class="dxIcon_arrange_sendbackward_16x16 dxm-image dx-vam"
+                                    src="Images/01.gif" alt=""
+                                    id="ctl00_ctl00_TopMenuPane_ctl10_menuTop_DXI3_Img"><span class="dx-vam">Tra cứu văn bằng</span></a><b
+                                    class="dx-clear"></b></li>
+                            <li class="dxm-spacing dxm-amis" id="ctl00_ctl00_TopMenuPane_ctl10_menuTop_DXI4_II"></li>
+                            <li class="dxm-item dxm-dropDownMode dxm-noImage dxm-ami" style="font-size:Medium;"
+                                id="ctl00_ctl00_TopMenuPane_ctl10_menuTop_DXI4_">
+                                <div class="dxm-content dxm-hasText" id="ctl00_ctl00_TopMenuPane_ctl10_menuTop_DXI4_T">
+                                    <span class="dx-vam">Item</span>
+                                </div>
+                                <div class="dxm-popOut" id="ctl00_ctl00_TopMenuPane_ctl10_menuTop_DXI4_P">
+                                    <img class="dxWeb_mAdaptiveMenu_Mulberry dxm-pImage"
+                                         src="Images/01.gif" alt="..."
+                                         id="ctl00_ctl00_TopMenuPane_ctl10_menuTop_DXI4_PImg">
+                                </div>
+                                <b class="dx-clear"></b></li>
+                        </ul>
+                    </div>
+                    <b class="dx-clear"></b>
+                    <div id="ctl00_ctl00_TopMenuPane_ctl10_menuTop_DXM0_"
+                         style="z-index: 20002; display: none; position: absolute;">
+                        <div class="dxm-shadow dxm-popup" style="font-size:Medium;"
+                             id="ctl00_ctl00_TopMenuPane_ctl10_menuTop_DXME0_">
+                            <ul class="dx dxm-noImages dxm-gutter">
+                                <li class="dxm-item" id="ctl00_ctl00_TopMenuPane_ctl10_menuTop_DXI0i0_"><a
+                                        class="dxm-content dxm-hasText dx"
+                                        href="javascript:void(0)"
+                                        style="font-size:Medium;"
+                                        id="ctl00_ctl00_TopMenuPane_ctl10_menuTop_DXI0i0_T"><span class="dx-vam">Quy định - Quy chế</span></a><b
+                                        class="dx-clear"></b></li>
+                                <li class="dxm-spacing" id="ctl00_ctl00_TopMenuPane_ctl10_menuTop_DXI0i1_II"></li>
+                                <li class="dxm-item" id="ctl00_ctl00_TopMenuPane_ctl10_menuTop_DXI0i1_"><a
+                                        class="dxm-content dxm-hasText dx"
+                                        href="javascript:void(0)"
+                                        style="font-size:Medium;"
+                                        id="ctl00_ctl00_TopMenuPane_ctl10_menuTop_DXI0i1_T"><span class="dx-vam">Các ngành đào tạo</span></a><b
+                                        class="dx-clear"></b></li>
+                                <li class="dxm-spacing" id="ctl00_ctl00_TopMenuPane_ctl10_menuTop_DXI0i2_II"></li>
+                                <li class="dxm-item" id="ctl00_ctl00_TopMenuPane_ctl10_menuTop_DXI0i2_"><a
+                                        class="dxm-content dxm-hasText dx"
+                                        href="javascript:void(0)"
+                                        style="font-size:Medium;"
+                                        id="ctl00_ctl00_TopMenuPane_ctl10_menuTop_DXI0i2_T"><span class="dx-vam">Kế hoạch học tập</span></a><b
+                                        class="dx-clear"></b></li>
+                                <li class="dxm-spacing" id="ctl00_ctl00_TopMenuPane_ctl10_menuTop_DXI0i3_II"></li>
+                                <li class="dxm-item" id="ctl00_ctl00_TopMenuPane_ctl10_menuTop_DXI0i3_"><a
+                                        class="dxm-content dxm-hasText dx"
+                                        href="javascript:void(0)"
+                                        style="font-size:Medium;"
+                                        id="ctl00_ctl00_TopMenuPane_ctl10_menuTop_DXI0i3_T"><span class="dx-vam">Tin tức - Thông báo</span></a><b
+                                        class="dx-clear"></b></li>
+                                <li class="dxm-spacing" id="ctl00_ctl00_TopMenuPane_ctl10_menuTop_DXI0i4_II"></li>
+                                <li class="dxm-item" id="ctl00_ctl00_TopMenuPane_ctl10_menuTop_DXI0i4_"><a
+                                        class="dxm-content dxm-hasText dx"
+                                        href="javascript:void(0)"
+                                        style="font-size:Medium;"
+                                        id="ctl00_ctl00_TopMenuPane_ctl10_menuTop_DXI0i4_T"><span class="dx-vam">Thông tin văn bằng 2</span></a><b
+                                        class="dx-clear"></b></li>
+                                <li class="dxm-spacing" id="ctl00_ctl00_TopMenuPane_ctl10_menuTop_DXI0i5_II"></li>
+                                <li class="dxm-item" id="ctl00_ctl00_TopMenuPane_ctl10_menuTop_DXI0i5_"><a
+                                        class="dxm-content dxm-hasText dx"
+                                        href="javascript:void(0)"
+                                        style="font-size:Medium;"
+                                        id="ctl00_ctl00_TopMenuPane_ctl10_menuTop_DXI0i5_T"><span class="dx-vam">Chương trình đặc biệt</span></a><b
+                                        class="dx-clear"></b></li>
+                                <li class="dxm-spacing" id="ctl00_ctl00_TopMenuPane_ctl10_menuTop_DXI0i6_II"></li>
+                                <li class="dxm-item" id="ctl00_ctl00_TopMenuPane_ctl10_menuTop_DXI0i6_"><a
+                                        class="dxm-content dxm-hasText dx"
+                                        href="javascript:void(0)"
+                                        style="font-size:Medium;"
+                                        id="ctl00_ctl00_TopMenuPane_ctl10_menuTop_DXI0i6_T"><span class="dx-vam">Biểu mẫu</span></a><b
+                                        class="dx-clear"></b></li>
+                                <li class="dxm-spacing" id="ctl00_ctl00_TopMenuPane_ctl10_menuTop_DXI0i7_II"></li>
+                                <li class="dxm-item" id="ctl00_ctl00_TopMenuPane_ctl10_menuTop_DXI0i7_"><a
+                                        class="dxm-content dxm-hasText dx"
+                                        href="javascript:void(0)"
+                                        style="font-size:Medium;"
+                                        id="ctl00_ctl00_TopMenuPane_ctl10_menuTop_DXI0i7_T"><span
+                                        class="dx-vam">Liên hệ</span></a><b class="dx-clear"></b></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div id="ctl00_ctl00_TopMenuPane_ctl10_menuTop_DXM1_"
+                         style="z-index: 20002; display: none; position: absolute;">
+                        <div class="dxm-shadow dxm-popup" style="font-size:Medium;"
+                             id="ctl00_ctl00_TopMenuPane_ctl10_menuTop_DXME1_">
+                            <ul class="dx dxm-noImages dxm-gutter">
+                                <li class="dxm-item" id="ctl00_ctl00_TopMenuPane_ctl10_menuTop_DXI1i0_"><a
+                                        class="dxm-content dxm-hasText dx"
+                                        href="javascript:void(0)"
+                                        style="font-size:Medium;"
+                                        id="ctl00_ctl00_TopMenuPane_ctl10_menuTop_DXI1i0_T"><span class="dx-vam">Tuyển sinh</span></a><b
+                                        class="dx-clear"></b></li>
+                                <li class="dxm-spacing" id="ctl00_ctl00_TopMenuPane_ctl10_menuTop_DXI1i1_II"></li>
+                                <li class="dxm-item" id="ctl00_ctl00_TopMenuPane_ctl10_menuTop_DXI1i1_"><a
+                                        class="dxm-content dxm-hasText dx"
+                                        href="javascript:void(0)"
+                                        style="font-size:Medium;"
+                                        id="ctl00_ctl00_TopMenuPane_ctl10_menuTop_DXI1i1_T"><span
+                                        class="dx-vam">Đào tạo</span></a><b class="dx-clear"></b></li>
+                                <li class="dxm-spacing" id="ctl00_ctl00_TopMenuPane_ctl10_menuTop_DXI1i2_II"></li>
+                                <li class="dxm-item" id="ctl00_ctl00_TopMenuPane_ctl10_menuTop_DXI1i2_"><a
+                                        class="dxm-content dxm-hasText dx"
+                                        href="javascript:void(0)"
+                                        style="font-size:Medium;"
+                                        id="ctl00_ctl00_TopMenuPane_ctl10_menuTop_DXI1i2_T"><span class="dx-vam">Mẫu văn bản giấy tờ</span></a><b
+                                        class="dx-clear"></b></li>
+                                <li class="dxm-spacing" id="ctl00_ctl00_TopMenuPane_ctl10_menuTop_DXI1i3_II"></li>
+                                <li class="dxm-item" id="ctl00_ctl00_TopMenuPane_ctl10_menuTop_DXI1i3_"><a
+                                        class="dxm-content dxm-hasText dx"
+                                        href="javascript:void(0)"
+                                        style="font-size:Medium;"
+                                        id="ctl00_ctl00_TopMenuPane_ctl10_menuTop_DXI1i3_T"><span class="dx-vam">Văn bản - Quy chế</span></a><b
+                                        class="dx-clear"></b></li>
+                                <li class="dxm-spacing" id="ctl00_ctl00_TopMenuPane_ctl10_menuTop_DXI1i4_II"></li>
+                                <li class="dxm-item" id="ctl00_ctl00_TopMenuPane_ctl10_menuTop_DXI1i4_"><a
+                                        class="dxm-content dxm-hasText dx"
+                                        href="javascript:void(0)"
+                                        style="font-size:Medium;"
+                                        id="ctl00_ctl00_TopMenuPane_ctl10_menuTop_DXI1i4_T"><span class="dx-vam">Thông tin văn bằng</span></a><b
+                                        class="dx-clear"></b></li>
+                                <li class="dxm-spacing" id="ctl00_ctl00_TopMenuPane_ctl10_menuTop_DXI1i5_II"></li>
+                                <li class="dxm-item" id="ctl00_ctl00_TopMenuPane_ctl10_menuTop_DXI1i5_"><a
+                                        class="dxm-content dxm-hasText dx"
+                                        href="javascript:void(0)"
+                                        style="font-size:Medium;"
+                                        id="ctl00_ctl00_TopMenuPane_ctl10_menuTop_DXI1i5_T"><span class="dx-vam">Trang thông tin cá nhân</span></a><b
+                                        class="dx-clear"></b></li>
+                                <li class="dxm-spacing" id="ctl00_ctl00_TopMenuPane_ctl10_menuTop_DXI1i6_II"></li>
+                                <li class="dxm-item" id="ctl00_ctl00_TopMenuPane_ctl10_menuTop_DXI1i6_"><a
+                                        class="dxm-content dxm-hasText dx"
+                                        href="javascript:void(0)"
+                                        style="font-size:Medium;"
+                                        id="ctl00_ctl00_TopMenuPane_ctl10_menuTop_DXI1i6_T"><span
+                                        class="dx-vam">Liên hệ</span></a><b class="dx-clear"></b></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div id="ctl00_ctl00_TopMenuPane_ctl10_menuTop_DXM2_"
+                         style="z-index: 20002; display: none; position: absolute;">
+                        <div class="dxm-shadow dxm-popup" style="font-size:Medium;"
+                             id="ctl00_ctl00_TopMenuPane_ctl10_menuTop_DXME2_">
+                            <ul class="dx dxm-noImages dxm-gutter">
+                                <li class="dxm-item" id="ctl00_ctl00_TopMenuPane_ctl10_menuTop_DXI2i0_"><a
+                                        class="dxm-content dxm-hasText dx"
+                                        href="javascript:void(0)"
+                                        style="font-size:Medium;"
+                                        id="ctl00_ctl00_TopMenuPane_ctl10_menuTop_DXI2i0_T"><span class="dx-vam">Thông báo</span></a><b
+                                        class="dx-clear"></b></li>
+                                <li class="dxm-spacing" id="ctl00_ctl00_TopMenuPane_ctl10_menuTop_DXI2i1_II"></li>
+                                <li class="dxm-item" id="ctl00_ctl00_TopMenuPane_ctl10_menuTop_DXI2i1_"><a
+                                        class="dxm-content dxm-hasText dx"
+                                        href="javascript:void(0)"
+                                        style="font-size:Medium;"
+                                        id="ctl00_ctl00_TopMenuPane_ctl10_menuTop_DXI2i1_T"><span class="dx-vam">Hỏi - Đáp</span></a><b
+                                        class="dx-clear"></b></li>
+                                <li class="dxm-spacing" id="ctl00_ctl00_TopMenuPane_ctl10_menuTop_DXI2i2_II"></li>
+                                <li class="dxm-item" id="ctl00_ctl00_TopMenuPane_ctl10_menuTop_DXI2i2_"><a
+                                        class="dxm-content dxm-hasText dx"
+                                        href="javascript:void(0)"
+                                        style="font-size:Medium;"
+                                        id="ctl00_ctl00_TopMenuPane_ctl10_menuTop_DXI2i2_T"><span
+                                        class="dx-vam">Học phí</span></a><b class="dx-clear"></b></li>
+                                <li class="dxm-spacing" id="ctl00_ctl00_TopMenuPane_ctl10_menuTop_DXI2i3_II"></li>
+                                <li class="dxm-item" id="ctl00_ctl00_TopMenuPane_ctl10_menuTop_DXI2i3_"><a
+                                        class="dxm-content dxm-hasText dx"
+                                        href="javascript:void(0)"
+                                        style="font-size:Medium;"
+                                        id="ctl00_ctl00_TopMenuPane_ctl10_menuTop_DXI2i3_T"><span class="dx-vam">Học bổng tài trợ</span></a><b
+                                        class="dx-clear"></b></li>
+                                <li class="dxm-spacing" id="ctl00_ctl00_TopMenuPane_ctl10_menuTop_DXI2i4_II"></li>
+                                <li class="dxm-item" id="ctl00_ctl00_TopMenuPane_ctl10_menuTop_DXI2i4_"><a
+                                        class="dxm-content dxm-hasText dx"
+                                        href="javascript:void(0)"
+                                        style="font-size:Medium;"
+                                        id="ctl00_ctl00_TopMenuPane_ctl10_menuTop_DXI2i4_T"><span class="dx-vam">Việc làm</span></a><b
+                                        class="dx-clear"></b></li>
+                                <li class="dxm-spacing" id="ctl00_ctl00_TopMenuPane_ctl10_menuTop_DXI2i5_II"></li>
+                                <li class="dxm-item" id="ctl00_ctl00_TopMenuPane_ctl10_menuTop_DXI2i5_"><a
+                                        class="dxm-content dxm-hasText dx"
+                                        href="javascript:void(0)"
+                                        style="font-size:Medium;"
+                                        id="ctl00_ctl00_TopMenuPane_ctl10_menuTop_DXI2i5_T"><span class="dx-vam">Biểu mẫu</span></a><b
+                                        class="dx-clear"></b></li>
+                                <li class="dxm-spacing" id="ctl00_ctl00_TopMenuPane_ctl10_menuTop_DXI2i6_II"></li>
+                                <li class="dxm-item" id="ctl00_ctl00_TopMenuPane_ctl10_menuTop_DXI2i6_"><a
+                                        class="dxm-content dxm-hasText dx"
+                                        href="javascript:void(0)"
+                                        style="font-size:Medium;"
+                                        id="ctl00_ctl00_TopMenuPane_ctl10_menuTop_DXI2i6_T"><span class="dx-vam">Cựu sinh viên</span></a><b
+                                        class="dx-clear"></b></li>
+                                <li class="dxm-spacing" id="ctl00_ctl00_TopMenuPane_ctl10_menuTop_DXI2i7_II"></li>
+                                <li class="dxm-item" id="ctl00_ctl00_TopMenuPane_ctl10_menuTop_DXI2i7_"><a
+                                        class="dxm-content dxm-hasText dx"
+                                        href="javascript:void(0)"
+                                        style="font-size:Medium;"
+                                        id="ctl00_ctl00_TopMenuPane_ctl10_menuTop_DXI2i7_T"><span
+                                        class="dx-vam">Liên hệ</span></a><b class="dx-clear"></b></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div id="ctl00_ctl00_TopMenuPane_ctl10_menuTop_DXM4_"
+                         style="z-index: 20000; display: none; position: absolute;">
+                        <div class="dxm-shadow dxm-popup dxm-am" style="font-size:Medium;"
+                             id="ctl00_ctl00_TopMenuPane_ctl10_menuTop_DXME4_">
+                            <ul class="dx dxm-gutter">
+
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <script id="dxss_1020780313" type="text/javascript" data-executed="true">
+                    ASPx.AddHoverItems('ctl00_ctl00_TopMenuPane_ctl10_menuTop', [[['dxm-hovered', '', ''], ['color:Beige;background-color:#8C1515;', '', ''], ['DXI0_', 'DXI1_', 'DXI2_', 'DXI3_', 'DXI4_'], ['', 'P', 'T']], [[''], [''], ['DXME0_', 'DXMBC0_', 'DXME1_', 'DXMBC1_', 'DXME2_', 'DXMBC2_', 'DXME4_', 'DXMBC4_']], [['dxm-hovered', ''], ['color:Beige;background-color:#8C1515;', ''], ['DXI0i0_', 'DXI0i1_', 'DXI0i2_', 'DXI0i3_', 'DXI0i4_', 'DXI0i5_', 'DXI0i6_', 'DXI0i7_', 'DXI1i0_', 'DXI1i1_', 'DXI1i2_', 'DXI1i3_', 'DXI1i4_', 'DXI1i5_', 'DXI1i6_', 'DXI2i0_', 'DXI2i1_', 'DXI2i2_', 'DXI2i3_', 'DXI2i4_', 'DXI2i5_', 'DXI2i6_', 'DXI2i7_'], ['', 'T']]]);
+                    ASPx.createControl(ASPxClientMenu, 'ctl00_ctl00_TopMenuPane_ctl10_menuTop', '', {
+                        'uniqueID': 'ctl00$ctl00$TopMenuPane$ctl10$menuTop',
+                        'renderData': {
+                            '': [[0], [1], [2], [3], [4]],
+                            '0': [[0], [1], [2], [3], [4], [5], [6], [7]],
+                            '1': [[0], [1], [2], [3], [4], [5], [6]],
+                            '2': [[0], [1], [2], [3], [4], [5], [6], [7]]
+                        },
+                        'subMenuFIXOffset': 1,
+                        'subMenuFIYOffset': -2,
+                        'subMenuLIXOffset': 1,
+                        'subMenuLIYOffset': -2,
+                        'subMenuXOffset': 1,
+                        'subMenuYOffset': -2,
+                        'isVertical': true
+                    }, null, null, {'adaptiveModeData': 4});
+
+                    //-->
+                </script>
+
+            </div>
+        </div>
+    </div>
+    <script id="dxss_1845996416" type="text/javascript" data-executed="true">
+        ASPx.AddHoverItems('ctl00_ctl00_TopMenuPane', [[['dxpnl-btnHover'], [''], ['EBB']]]);
+        ASPx.AddPressedItems('ctl00_ctl00_TopMenuPane', [[['dxpnl-btnPressed'], [''], ['EBB']]]);
+        ASPx.AddSelectedItems('ctl00_ctl00_TopMenuPane', [[['dxpnl-expanded'], [''], ['', 'EB']], [['dxpnl-btnSelected'], [''], ['EBB']]]);
+        ASPx.createControl(ASPxClientPanel, 'ctl00_ctl00_TopMenuPane', '', {
+            'uniqueID': 'ctl00$ctl00$TopMenuPane',
+            'collapseWindowWidth': 600,
+            'animationType': 'slide'
+        });
+    </script>
+
+    <div class="breadCrumbPanel">
+        <div id="breadCrumb">
+            <ul class="breadCrumbList">
+                <li class="start cap1"><a href="javascript:void(0)">Trang chủ</a></li>
+            </ul>
+            <div class="clear"></div>
+        </div>
+    </div>
+
     <table style="width:100%;">
         <tbody>
         <tr>
@@ -571,6 +1207,20 @@
         </tr>
         </tbody>
     </table>
+    <footer class="footer">
+        <div class="footerContent">
+            <div class="footerMain">
+                <div class="footerLeft">
+                </div>
+                <div class="footerRight">
+                    <hr>
+                    <b>Trường Đại học Bách Khoa Hà Nội</b>
+                    <br><br>
+                    <p>Số 1 Đại Cồ Việt, Hai Bà Trưng, Hà Nội</p>
+                </div>
+            </div>
+        </div>
+    </footer>
 </div>
 
 </body>

@@ -93,7 +93,7 @@ h3 {
 }
 
 .muiTen1 {
-    background: url('Images/icon_total_01.png') no-repeat -287px -45px;
+    background: url('../Images/icon_total_01.png') no-repeat -287px -45px;
     width: 13px;
     height: 25px;
     display: block;
@@ -109,7 +109,7 @@ h3 {
 }
 
 .muiTen2 {
-    background: url('Images/icon_total_01.png') no-repeat -287px -70px;
+    background: url('../Images/icon_total_01.png') no-repeat -287px -70px;
     width: 13px;
     height: 25px;
     display: block;
@@ -216,7 +216,7 @@ h3 {
     position: relative;
     padding-left: 15px;
     display: block;
-    background: url('Images/right-arrow.png') no-repeat 0 16px;
+    background: url('../Images/right-arrow.png') no-repeat 0 16px;
 }
 
 /*--------------------------------------------MainContent*/
@@ -284,6 +284,10 @@ h3 {
 .normalText i {
     font-size: 16px;
     font-weight: initial;
+}
+
+.normalText label {
+    margin-bottom: 0;
 }
 
 .rowEdit {
@@ -380,7 +384,7 @@ hr {
 }
 
 .icon-button {
-    background-image: url(Images/button-icon.svg);
+    background-image: url(../Images/button-icon.svg);
     border: none; /* Remove borders */
     padding: 12px 12px; /* Some padding */
     font-size: 16px; /* Set a font size */
@@ -407,7 +411,7 @@ hr {
 .footerMain {
     width: 100%;
     float: left;
-    background: url('Images/footer.jpg') no-repeat top;
+    background: url('../Images/footer.jpg') no-repeat top;
     height: 100px;
 }
 
@@ -508,3 +512,147 @@ hr {
     box-shadow: 0 6px 6px 0 rgba(0, 0, 0, 0.2);
 }
 
+/*---------------------------------Notification */
+
+
+/*---------------------------------TreeView */
+.dxtv-subnd
+{
+    margin-left: 0px !important;
+}
+
+/*--------------------------------------------Mulberry*/
+.dxmLite_Mulberry
+{
+    font: 14px 'Segoe UI','Helvetica Neue','Droid Sans',Arial,Tahoma,Geneva,Sans-serif;
+    color: #343434;
+}
+
+.dxmLite_Mulberry .dxm-horizontal
+{
+    padding: 2px;
+}
+.dxmLite_Mulberry .dxm-main
+{
+    background-color: #E7E9ED;
+}
+
+.dxm-ltr .dxm-main,
+.dxm-ltr .dxm-horizontal ul.dx
+{
+    float: left;
+}
+.dxm-main
+{
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+.dxmLite_Mulberry .dxm-content
+{
+    display: block;
+    white-space: nowrap;
+}
+
+.dxm-ltr .dxm-horizontal .dxm-item,
+.dxm-ltr .dxm-horizontal .dxm-spacing,
+.dxm-ltr .dxm-horizontal .dxm-separator,
+.dxm-ltr .dxm-content
+{
+    float: left;
+}
+.dxm-content.dxm-hasText
+{
+    line-height: 100%;
+}
+
+.dxm-content
+{
+    line-height: 0;
+}
+
+.dxm-content {
+    font: 12px Tahoma, Geneva, sans-serif;
+    float: none !important;
+}
+
+.dx-vam, .dx-valm { vertical-align: middle; }
+.dx-vam, .dx-vat, .dx-vab { display: inline-block!important; }
+.dxmLite_Mulberry .dxm-horizontal .dxm-spacing
+{
+    width: 2px;
+    height: 1px;
+}
+
+.dxm-popOut,
+.dxm-spacing,
+.dxm-separator,
+.dxm-separator b
+{
+    font-size: 0;
+    line-height: 0;
+    display: block;
+}
+.dxm-horizontal .dxm-ami .dxm-content
+{
+    overflow: hidden!important;
+    padding-left: 0!important;
+    padding-right: 0!important;
+    width: 0px!important;
+}
+.dxmLite_Mulberry.dxm-ltr .dxm-dropDownMode .dxm-popOut
+{
+    border: Solid 1px transparent;
+}
+.dxm-horizontal .dxm-ami .dxm-popOut
+{
+    border-top: 0!important;
+    border-right: 0!important;
+    border-bottom: 0!important;
+    border-left: 0!important;
+}
+
+.dxm-ltr .dxm-horizontal .dxm-popOut,
+.dxm-rtl .dxm-horizontal .dxm-image-l .dxm-popOut
+{
+    float: right;
+}
+.dxm-popOut /*Bootstrap correction*/
+{
+    -webkit-box-sizing: content-box;
+    -moz-box-sizing: content-box;
+    box-sizing: content-box;
+}
+
+.dx-clear
+{
+    display: block;
+    clear: both;
+    height: 0;
+    width: 0;
+    font-size: 0;
+    line-height: 0;
+    overflow: hidden;
+    visibility: hidden;
+}
+
+.dxmLite_Mulberry .dxm-content {
+    font: 1em Tahoma, Geneva, sans-serif;
+    float: none !important;
+}
+
+.dxmLite_Mulberry.dxm-ltr .dxm-popup .dxm-noImages .dxm-item{
+    padding-left: 6px;
+    width: 300px;
+}
+
+
+.dxgvHeader, .dxgvHeader table
+{
+    font-family: 'Segoe UI';
+    font-size: 14px;
+    font-weight: bold;
+    color: #FFFFFF;
+    background-color: #9C1010;
+}
