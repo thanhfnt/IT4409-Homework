@@ -1,11 +1,12 @@
-const list_key = ['editName', 'editDanToc', 'editTonGiao', 'editQuocTich',
-    'editNoiSinh', 'editNamTotNghiep', 'editTruongCap3', 'editDoiTuong', 'editCMND', 'editNgayCap', 'editNoiCap',
-    'editSoDienThoai', 'editEmail', 'editDiaChiTinh', 'editDiaChiHuyen', 'editDiaChiXa', 'editDiaChiNha',
-    'editHoKhauTinh', 'editHoKhauHuyen', 'editHoKhauXa', 'editHoKhauKhuVuc', 'editBoHoTen', 'editBoNamSinh',
-    'editBoNgheNghiep', 'editBoSDT', 'editBoEmail', 'editMeHoTen', 'editMeNamSinh', 'editMeNgheNghiep', 'editMeSDT',
-    'editMeEmail', 'editLienHe'];
+const list_key = ['editName', 'editGentleMale', 'editGentleFemale', 'editGentleOther', 'editLop',
+    'editChuongTrinh', 'editKhoaVien', 'editEmail', 'editDanToc', 'editTonGiao',
+    'editNamTotNghiep', 'editTruongCap3', 'editCMND', 'editSoDienThoai', 'editDiaChiTinh', 'editDiaChiHuyen',
+    'editDiaChiXa', 'editDiaChiNha', 'editHoKhauTinh', 'editHoKhauHuyen', 'editHoKhauXa', 'editHoKhauKhuVuc',
+    'editBoHoTen', 'editBoNamSinh', 'editBoNgheNghiep', 'editBoSDT', 'editBoEmail', 'editMeHoTen', 'editMeNamSinh',
+    'editMeNgheNghiep', 'editMeSDT', 'editMeEmail', 'editNamVaoTruong', 'editBacDaoTao', 'editKhoaHoc',
+    'editTinhTrangHocTap'];
 
-const list_check_key = ['editGentleMale', 'editGentleFemale'];
+const list_check_key = ['editGentleMale', 'editGentleFemale', 'editGentleOther'];
 
 function loadDataForDetail() {
     list_key.forEach(key => {
@@ -18,7 +19,6 @@ function loadDataForDetail() {
             localStorage.setItem(key, document.getElementById(key).innerText);
     })
     if (localStorage.getItem('editGentleMale') !== null) {
-        console.log(localStorage.getItem('editGentleMale'));
         if (localStorage.getItem('editGentleMale') === 'true') {
             document.getElementById('editGentle').innerText = 'Nam';
         } else if (localStorage.getItem('editGentleFemale') === 'true') {
@@ -31,6 +31,8 @@ function loadDataForDetail() {
             localStorage.setItem('editGentleMale', 'true');
         else if (document.getElementById('editGentle').innerText === 'Nữ')
             localStorage.setItem('editGentleFemale', 'true');
+        else
+            localStorage.setItem('editGentleOther', 'true');
     }
 }
 
@@ -47,18 +49,12 @@ function loadDataForEdit() {
 }
 
 function saveData() {
-    const xacNhan = document.getElementById('editXacNhan').checked;
-    if (!xacNhan) {
-        window.alert('Vui lòng xác nhận thông tin');
-        return;
-    }
     list_key.forEach(key => {
         localStorage.setItem(key, document.getElementById(key).value);
     })
     list_check_key.forEach(key => {
         localStorage.setItem(key, document.getElementById(key).checked);
     })
-    window.alert('Cập nhật thành công');
     window.open(
         'index.html',
         '_self'

@@ -648,7 +648,7 @@
         </div>
     </div>
 
-    <table style="width:100%;">
+    <table style="position:relative;width:100%;">
         <tbody>
         <tr>
             <td style="vertical-align: top; margin:0;">
@@ -810,399 +810,407 @@
             </td>
 
             <td style="width:100%; vertical-align: top; margin:0;padding:10px;">
-                <div class="MainContentTitle">
-                    <div>
-                        <span class="Title">CẬP NHẬT THÔNG TIN CÁ NHÂN</span>
-                    </div>
-                    <hr>
-                </div>
-                <div class="MainContent">
-                    <div class="container">
-                        <div class="row">
-                            <span class="Title">Thông tin cá nhân</span>
+                <form action="index.html" onsubmit="saveData()" method="get">
+                    <div class="MainContentTitle">
+                        <div>
+                            <span class="Title">CẬP NHẬT THÔNG TIN CÁ NHÂN</span>
                         </div>
                         <hr>
-                        <div class="rowEdit">
-                            <div class="labelBox">
-                                <label for="editName">Họ và tên: *</label>
+                    </div>
+                    <div class="MainContent">
+                        <div class="container">
+                            <div class="row">
+                                <span class="Title">Thông tin sinh viên</span>
                             </div>
-                            <div class="inputBox">
-                                <input id="editName">
-                            </div>
-                        </div>
-                        <div class="rowEdit">
-                            <div class="labelBox">
-                                <label>Giới tính: *</label>
-                            </div>
-                            <div class="inputBox">
-                                <div class="radioBox">
-                                    <input id="editGentleMale" name="editGentle" type="radio">
-                                    <label for="editGentleMale">Nam</label>
+                            <hr>
+                            <div class="rowEdit">
+                                <div class="labelBox">
+                                    <label for="editName">Họ và tên: *</label>
                                 </div>
-                                <div class="radioBox">
-                                    <input id="editGentleFemale" name="editGentle" type="radio">
-                                    <label for="editGentleFemale">Nữ</label>
+                                <div class="inputBox">
+                                    <input id="editName" name="editName">
                                 </div>
                             </div>
+                            <div class="rowEdit">
+                                <div class="labelBox">
+                                    <label>Giới tính: *</label>
+                                </div>
+                                <div class="inputBox">
+                                    <div class="radioBox">
+                                        <input id="editGentleMale" name="editGentle" type="radio">
+                                        <label for="editGentleMale">Nam</label>
+                                    </div>
+                                    <div class="radioBox">
+                                        <input id="editGentleFemale" name="editGentle" type="radio">
+                                        <label for="editGentleFemale">Nữ</label>
+                                    </div>
+                                    <div class="radioBox">
+                                        <input id="editGentleOther" name="editGentle" type="radio">
+                                        <label for="editGentleOther">Khác</label>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="rowEdit">
+                                <div class="labelBox">
+                                    <label for="editNamVaoTruong">Năm vào trường: *</label>
+                                </div>
+                                <div class="inputBox">
+                                    <select id="editNamVaoTruong" name="editNamVaoTruong">
+                                        <option>2016</option>
+                                        <option>2017</option>
+                                        <option>2018</option>
+                                        <option>2019</option>
+                                        <option>2020</option>
+                                        <option>2021</option>
+                                        <option>2022</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="rowEdit">
+                                <div class="labelBox">
+                                    <label for="editLop">Lớp: *</label>
+                                </div>
+                                <div class="inputBox">
+                                    <input id="editLop">
+                                </div>
+                            </div>
+                            <div class="rowEdit">
+                                <div class="labelBox">
+                                    <label for="editBacDaoTao">Bậc đào tạo: *</label>
+                                </div>
+                                <div class="inputBox">
+                                    <select id="editBacDaoTao">
+                                        <option>Đại học đại trà</option>
+                                        <option>Kỹ sư chính quy</option>
+                                        <option>Thạc sĩ khoa học</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="rowEdit">
+                                <div class="labelBox">
+                                    <label for="editChuongTrinh">Chương trình: *</label>
+                                </div>
+                                <div class="inputBox">
+                                    <input id="editChuongTrinh">
+                                </div>
+                            </div>
+
+                            <div class="rowEdit">
+                                <div class="labelBox">
+                                    <label for="editKhoaHoc">Khóa học: *</label>
+                                </div>
+                                <div class="inputBox">
+                                    <select id="editKhoaHoc">
+                                        <option>61</option>
+                                        <option>62</option>
+                                        <option>63</option>
+                                        <option>64</option>
+                                        <option>65</option>
+                                        <option>66</option>
+                                        <option>67</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="rowEdit">
+                                <div class="labelBox">
+                                    <label for="editKhoaVien">Khoa/Viện quản lý: *</label>
+                                </div>
+                                <div class="inputBox">
+                                    <input id="editKhoaVien">
+                                </div>
+                            </div>
+
+                            <div class="rowEdit">
+                                <div class="labelBox">
+                                    <label for="editEmail">Email: *</label>
+                                </div>
+                                <div class="inputBox">
+                                    <input id="editEmail">
+                                </div>
+                            </div>
+                            <div class="rowEdit">
+                                <div class="labelBox">
+                                    <label for="editTinhTrangHocTap">Tình trạng học tập: *</label>
+                                </div>
+                                <div class="inputBox">
+                                    <select id="editTinhTrangHocTap">
+                                        <option>Học</option>
+                                        <option>Nghỉ học</option>
+                                        <option>Bảo lưu</option>
+                                    </select>
+                                </div>
+                            </div>
                         </div>
-                        <div class="rowEdit">
-                            <div class="labelBox">
-                                <label for="editDanToc">Dân tộc: *</label>
+                        <div class="container">
+                            <div class="row">
+                                <span class="Title">Thông tin cá nhân</span>
                             </div>
-                            <div class="inputBox">
-                                <input id="editDanToc">
+                            <hr>
+                            <div class="rowEdit">
+                                <div class="labelBox">
+                                    <label for="editDanToc">Dân tộc: *</label>
+                                </div>
+                                <div class="inputBox">
+                                    <input id="editDanToc">
+                                </div>
                             </div>
-                        </div>
-                        <div class="rowEdit">
-                            <div class="labelBox">
-                                <label for="editTonGiao">Tôn giáo: *</label>
+                            <div class="rowEdit">
+                                <div class="labelBox">
+                                    <label for="editTonGiao">Tôn giáo: *</label>
+                                </div>
+                                <div class="inputBox">
+                                    <input id="editTonGiao">
+                                </div>
                             </div>
-                            <div class="inputBox">
-                                <input id="editTonGiao">
+                            <div class="rowEdit">
+                                <div class="labelBox">
+                                    <label for="editNamTotNghiep">Năm TN cấp 3: *</label>
+                                </div>
+                                <div class="inputBox">
+                                    <input id="editNamTotNghiep">
+                                </div>
                             </div>
-                        </div>
-                        <div class="rowEdit">
-                            <div class="labelBox">
-                                <label for="editQuocTich">Quốc tịch: *</label>
+                            <div class="rowEdit">
+                                <div class="labelBox">
+                                    <label for="editTruongCap3">Trường cấp 3: *</label>
+                                </div>
+                                <div class="inputBox">
+                                    <input id="editTruongCap3">
+                                </div>
                             </div>
-                            <div class="inputBox">
-                                <input id="editQuocTich" list="quocTichList">
-                                <datalist id="quocTichList">
-                                    <option>Việt Nam</option>
-                                    <option>Nước ngoài</option>
-                                </datalist>
+                            <div class="rowEdit">
+                                <div class="labelBox">
+                                    <label for="editCMND">Số CMND/Hộ chiếu: *</label>
+                                </div>
+                                <div class="inputBox">
+                                    <input id="editCMND">
+                                </div>
                             </div>
-                        </div>
-                        <div class="rowEdit">
-                            <div class="labelBox">
-                                <label for="editNoiSinh">Nơi sinh: *</label>
-                            </div>
-                            <div class="inputBox">
-                                <input id="editNoiSinh" list="tinhThanhList">
-                                <datalist id="tinhThanhList">
-                                    <option>Hà Nội</option>
-                                    <option>TP.Hồ Chí Minh</option>
-                                    <option>Đà Nẵng</option>
-                                </datalist>
-                            </div>
-                        </div>
-                        <div class="rowEdit">
-                            <div class="labelBox">
-                                <label for="editNamTotNghiep">Năm TN cấp 3: *</label>
-                            </div>
-                            <div class="inputBox">
-                                <input id="editNamTotNghiep">
-                            </div>
-                        </div>
-                        <div class="rowEdit">
-                            <div class="labelBox">
-                                <label for="editTruongCap3">Trường cấp 3: *</label>
-                            </div>
-                            <div class="inputBox">
-                                <input id="editTruongCap3">
-                            </div>
-                        </div>
-                        <div class="rowEdit">
-                            <div class="labelBox">
-                                <label for="editDoiTuong">Đối tượng: *</label>
-                            </div>
-                            <div class="inputBox">
-                                <input id="editDoiTuong" list="listDoiTuong">
-                                <datalist id="listDoiTuong">
-                                    <option>Hộ nghèo</option>
-                                    <option>Hộ cận nghèo</option>
-                                </datalist>
-                            </div>
-                        </div>
-                        <div class="rowEdit">
-                            <div class="labelBox">
-                                <label for="editCMND">Số CMND/Hộ chiếu: *</label>
-                            </div>
-                            <div class="inputBox">
-                                <input id="editCMND">
-                            </div>
-                        </div>
-                        <div class="rowEdit">
-                            <div class="labelBox">
-                                <label for="editNgayCap">Ngày cấp: *</label>
-                            </div>
-                            <div class="inputBox">
-                                <input id="editNgayCap" type="date">
-                            </div>
-                        </div>
-                        <div class="rowEdit">
-                            <div class="labelBox">
-                                <label for="editNoiCap">Nơi cấp: *</label>
-                            </div>
-                            <div class="inputBox">
-                                <input id="editNoiCap">
-                            </div>
-                        </div>
-                        <div class="rowEdit">
-                            <div class="labelBox">
-                                <label for="editSoDienThoai">Số điện thoại: *</label>
-                            </div>
-                            <div class="inputBox">
-                                <input id="editSoDienThoai">
+                            <div class="rowEdit">
+                                <div class="labelBox">
+                                    <label for="editSoDienThoai">Số điện thoại: *</label>
+                                </div>
+                                <div class="inputBox">
+                                    <input id="editSoDienThoai">
+                                </div>
                             </div>
                         </div>
 
-                        <div class="rowEdit">
-                            <div class="labelBox">
-                                <label for="editEmail">Email: *</label>
+                        <div class="container">
+                            <div class="row">
+                                <span class="Title">Địa chỉ hiện tại</span>
                             </div>
-                            <div class="inputBox">
-                                <input id="editEmail">
+                            <hr>
+                            <div class="rowEdit">
+                                <div class="labelBox">
+                                    <label for="editDiaChiTinh">Tỉnh/Thành phố: *</label>
+                                </div>
+                                <div class="inputBox">
+                                    <input id="editDiaChiTinh" list="diaChiTinhThanhlist">
+                                    <datalist id="diaChiTinhThanhlist">
+                                        <option>Thành Phố Hà Nội</option>
+                                    </datalist>
+                                </div>
+                            </div>
+                            <div class="rowEdit">
+                                <div class="labelBox">
+                                    <label for="editDiaChiHuyen">Quận/Huyện: *</label>
+                                </div>
+                                <div class="inputBox">
+                                    <input id="editDiaChiHuyen" list="diaChiQuanHuyenlist">
+                                    <datalist id="diaChiQuanHuyenlist">
+                                        <option>Quận Hai Bà Trưng</option>
+                                    </datalist>
+                                </div>
+                            </div>
+                            <div class="rowEdit">
+                                <div class="labelBox">
+                                    <label for="editDiaChiXa">Xã/Phường/TT: *</label>
+                                </div>
+                                <div class="inputBox">
+                                    <input id="editDiaChiXa" list="diaChiXaPhuonglist">
+                                    <datalist id="diaChiXaPhuonglist">
+                                        <option>Phường Bách Khoa</option>
+                                    </datalist>
+                                </div>
+                            </div>
+                            <div class="rowEdit">
+                                <div class="labelBox">
+                                    <label for="editDiaChiNha">Số nhà-đường/thôn: *</label>
+                                </div>
+                                <div class="inputBox">
+                                    <input id="editDiaChiNha">
+                                </div>
                             </div>
                         </div>
-                    </div>
 
-                    <div class="container">
-                        <div class="row">
-                            <span class="Title">Địa chỉ hiện tại</span>
+                        <div class="container">
+                            <div class="row">
+                                <span class="Title">Hộ khẩu</span>
+                            </div>
+                            <hr>
+                            <div class="rowEdit">
+                                <div class="labelBox">
+                                    <label for="editHoKhauTinh">Tỉnh/Thành phố: *</label>
+                                </div>
+                                <div class="inputBox">
+                                    <input id="editHoKhauTinh" list="hoKhauTinhThanhlist">
+                                    <datalist id="hoKhauTinhThanhlist">
+                                        <option>Thành Phố Hà Nội</option>
+                                    </datalist>
+                                </div>
+                            </div>
+                            <div class="rowEdit">
+                                <div class="labelBox">
+                                    <label for="editHoKhauHuyen">Quận/Huyện: *</label>
+                                </div>
+                                <div class="inputBox">
+                                    <input id="editHoKhauHuyen" list="hoKhauQuanHuyenlist">
+                                    <datalist id="hoKhauQuanHuyenlist">
+                                        <option>Quận Hai Bà Trưng</option>
+                                    </datalist>
+                                </div>
+                            </div>
+                            <div class="rowEdit">
+                                <div class="labelBox">
+                                    <label for="editHoKhauXa">Xã/Phường/TT: *</label>
+                                </div>
+                                <div class="inputBox">
+                                    <input id="editHoKhauXa" list="hoKhauXaPhuonglist">
+                                    <datalist id="hoKhauXaPhuonglist">
+                                        <option>Phường Bách Khoa</option>
+                                    </datalist>
+                                </div>
+                            </div>
+                            <div class="rowEdit">
+                                <div class="labelBox">
+                                    <label for="editHoKhauKhuVuc">Khu vực: *</label>
+                                </div>
+                                <div class="inputBox">
+                                    <input id="editHoKhauKhuVuc" list="hoKhauKhuVucList">
+                                    <datalist id="hoKhauKhuVucList">
+                                        <option>1</option>
+                                        <option>2</option>
+                                        <option>3</option>
+                                        <option>2NT</option>
+                                    </datalist>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="container">
+                            <div class="row">
+                                <span class="Title">Thông tin về bố</span>
+                            </div>
+                            <hr>
+                            <div class="rowEdit">
+                                <div class="labelBox">
+                                    <label for="editBoHoTen">Họ và tên: *</label>
+                                </div>
+                                <div class="inputBox">
+                                    <input id="editBoHoTen">
+                                </div>
+                            </div>
+                            <div class="rowEdit">
+                                <div class="labelBox">
+                                    <label for="editBoNamSinh">Năm sinh: *</label>
+                                </div>
+                                <div class="inputBox">
+                                    <input id="editBoNamSinh">
+                                </div>
+                            </div>
+                            <div class="rowEdit">
+                                <div class="labelBox">
+                                    <label for="editBoNgheNghiep">Nghề nghiêp: *</label>
+                                </div>
+                                <div class="inputBox">
+                                    <input id="editBoNgheNghiep">
+                                </div>
+                            </div>
+                            <div class="rowEdit">
+                                <div class="labelBox">
+                                    <label for="editBoSDT">Số điện thoại: *</label>
+                                </div>
+                                <div class="inputBox">
+                                    <input id="editBoSDT">
+                                </div>
+                            </div>
+                            <div class="rowEdit">
+                                <div class="labelBox">
+                                    <label for="editBoEmail">Email: *</label>
+                                </div>
+                                <div class="inputBox">
+                                    <input id="editBoEmail">
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="container">
+                            <div class="row">
+                                <span class="Title">Thông tin về mẹ</span>
+                            </div>
+                            <hr>
+                            <div class="rowEdit">
+                                <div class="labelBox">
+                                    <label for="editMeHoTen">Họ và tên: *</label>
+                                </div>
+                                <div class="inputBox">
+                                    <input id="editMeHoTen">
+                                </div>
+                            </div>
+                            <div class="rowEdit">
+                                <div class="labelBox">
+                                    <label for="editMeNamSinh">Năm sinh: *</label>
+                                </div>
+                                <div class="inputBox">
+                                    <input id="editMeNamSinh">
+                                </div>
+                            </div>
+                            <div class="rowEdit">
+                                <div class="labelBox">
+                                    <label for="editMeNgheNghiep">Nghề nghiêp: *</label>
+                                </div>
+                                <div class="inputBox">
+                                    <input id="editMeNgheNghiep">
+                                </div>
+                            </div>
+                            <div class="rowEdit">
+                                <div class="labelBox">
+                                    <label for="editMeSDT">Số điện thoại: *</label>
+                                </div>
+                                <div class="inputBox">
+                                    <input id="editMeSDT">
+                                </div>
+                            </div>
+                            <div class="rowEdit">
+                                <div class="labelBox">
+                                    <label for="editMeEmail">Email: *</label>
+                                </div>
+                                <div class="inputBox">
+                                    <input id="editMeEmail">
+                                </div>
+                            </div>
                         </div>
                         <hr>
-                        <div class="rowEdit">
-                            <div class="labelBox">
-                                <label for="editDiaChiTinh">Tỉnh/Thành phố: *</label>
-                            </div>
-                            <div class="inputBox">
-                                <input id="editDiaChiTinh" list="diaChiTinhThanhlist">
-                                <datalist id="diaChiTinhThanhlist">
-                                    <option>Thành Phố Hà Nội</option>
-                                </datalist>
-                            </div>
+                        <div class="container" style="display: flex;flex-direction: row;">
+                            <button class="cancelButton" onclick="clearData()">Cancel</button>
+                            <div style="width: 20px"></div>
+                            <button class="okButton" type="submit">OK</button>
                         </div>
-                        <div class="rowEdit">
-                            <div class="labelBox">
-                                <label for="editDiaChiHuyen">Quận/Huyện: *</label>
-                            </div>
-                            <div class="inputBox">
-                                <input id="editDiaChiHuyen" list="diaChiQuanHuyenlist">
-                                <datalist id="diaChiQuanHuyenlist">
-                                    <option>Quận Hai Bà Trưng</option>
-                                </datalist>
-                            </div>
-                        </div>
-                        <div class="rowEdit">
-                            <div class="labelBox">
-                                <label for="editDiaChiXa">Xã/Phường/TT: *</label>
-                            </div>
-                            <div class="inputBox">
-                                <input id="editDiaChiXa" list="diaChiXaPhuonglist">
-                                <datalist id="diaChiXaPhuonglist">
-                                    <option>Phường Bách Khoa</option>
-                                </datalist>
-                            </div>
-                        </div>
-                        <div class="rowEdit">
-                            <div class="labelBox">
-                                <label for="editDiaChiNha">Số nhà-đường/thôn: *</label>
-                            </div>
-                            <div class="inputBox">
-                                <input id="editDiaChiNha">
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="container">
+                        <br>
+                        <br>
+                        <br>
                         <div class="row">
-                            <span class="Title">Hộ khẩu</span>
-                        </div>
-                        <hr>
-                        <div class="rowEdit">
-                            <div class="labelBox">
-                                <label for="editHoKhauTinh">Tỉnh/Thành phố: *</label>
-                            </div>
-                            <div class="inputBox">
-                                <input id="editHoKhauTinh" list="hoKhauTinhThanhlist">
-                                <datalist id="hoKhauTinhThanhlist">
-                                    <option>Thành Phố Hà Nội</option>
-                                </datalist>
-                            </div>
-                        </div>
-                        <div class="rowEdit">
-                            <div class="labelBox">
-                                <label for="editHoKhauHuyen">Quận/Huyện: *</label>
-                            </div>
-                            <div class="inputBox">
-                                <input id="editHoKhauHuyen" list="hoKhauQuanHuyenlist">
-                                <datalist id="hoKhauQuanHuyenlist">
-                                    <option>Quận Hai Bà Trưng</option>
-                                </datalist>
-                            </div>
-                        </div>
-                        <div class="rowEdit">
-                            <div class="labelBox">
-                                <label for="editHoKhauXa">Xã/Phường/TT: *</label>
-                            </div>
-                            <div class="inputBox">
-                                <input id="editHoKhauXa" list="hoKhauXaPhuonglist">
-                                <datalist id="hoKhauXaPhuonglist">
-                                    <option>Phường Bách Khoa</option>
-                                </datalist>
-                            </div>
-                        </div>
-                        <div class="rowEdit">
-                            <div class="labelBox">
-                                <label for="editHoKhauKhuVuc">Khu vực: *</label>
-                            </div>
-                            <div class="inputBox">
-                                <input id="editHoKhauKhuVuc" list="hoKhauKhuVucList">
-                                <datalist id="hoKhauKhuVucList">
-                                    <option>1</option>
-                                    <option>2</option>
-                                    <option>3</option>
-                                    <option>2NT</option>
-                                </datalist>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="container">
-                        <div class="row">
-                            <span class="Title">Thông tin về bố</span>
-                        </div>
-                        <hr>
-                        <div class="rowEdit">
-                            <div class="labelBox">
-                                <label for="editBoHoTen">Họ và tên: *</label>
-                            </div>
-                            <div class="inputBox">
-                                <input id="editBoHoTen">
-                            </div>
-                        </div>
-                        <div class="rowEdit">
-                            <div class="labelBox">
-                                <label for="editBoNamSinh">Năm sinh: *</label>
-                            </div>
-                            <div class="inputBox">
-                                <input id="editBoNamSinh">
-                            </div>
-                        </div>
-                        <div class="rowEdit">
-                            <div class="labelBox">
-                                <label for="editBoNgheNghiep">Nghề nghiêp: *</label>
-                            </div>
-                            <div class="inputBox">
-                                <input id="editBoNgheNghiep">
-                            </div>
-                        </div>
-                        <div class="rowEdit">
-                            <div class="labelBox">
-                                <label for="editBoSDT">Số điện thoại: *</label>
-                            </div>
-                            <div class="inputBox">
-                                <input id="editBoSDT">
-                            </div>
-                        </div>
-                        <div class="rowEdit">
-                            <div class="labelBox">
-                                <label for="editBoEmail">Email: *</label>
-                            </div>
-                            <div class="inputBox">
-                                <input id="editBoEmail">
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="container">
-                        <div class="row">
-                            <span class="Title">Thông tin về mẹ</span>
-                        </div>
-                        <hr>
-                        <div class="rowEdit">
-                            <div class="labelBox">
-                                <label for="editMeHoTen">Họ và tên: *</label>
-                            </div>
-                            <div class="inputBox">
-                                <input id="editMeHoTen">
-                            </div>
-                        </div>
-                        <div class="rowEdit">
-                            <div class="labelBox">
-                                <label for="editMeNamSinh">Năm sinh: *</label>
-                            </div>
-                            <div class="inputBox">
-                                <input id="editMeNamSinh">
-                            </div>
-                        </div>
-                        <div class="rowEdit">
-                            <div class="labelBox">
-                                <label for="editMeNgheNghiep">Nghề nghiêp: *</label>
-                            </div>
-                            <div class="inputBox">
-                                <input id="editMeNgheNghiep">
-                            </div>
-                        </div>
-                        <div class="rowEdit">
-                            <div class="labelBox">
-                                <label for="editMeSDT">Số điện thoại: *</label>
-                            </div>
-                            <div class="inputBox">
-                                <input id="editMeSDT">
-                            </div>
-                        </div>
-                        <div class="rowEdit">
-                            <div class="labelBox">
-                                <label for="editMeEmail">Email: *</label>
-                            </div>
-                            <div class="inputBox">
-                                <input id="editMeEmail">
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="container">
-                        <div class="row">
-                            <span class="Title">Địa chỉ liên hệ khi cần thiết (bắt buộc)</span>
-                        </div>
-                        <hr>
-                        <div class="rowEdit">
-                            <div class="labelBox">
-                                <label for="editLienHe">*</label>
-                            </div>
-                            <div class="inputBox">
-                                <input id="editLienHe" type="text" style="height: 50px;">
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="container">
-                        <div class="row">
-                            <span class="Title">Xác nhận</span>
-                        </div>
-                        <hr>
-                        <div class="rowEdit">
-                            <div class="inputBox" style="flex: 0">
-                                <input id="editXacNhan" type="checkbox">
-                            </div>
-                            <div class="labelBox" style="flex: 1;padding-left: 10px">
-                                <label for="editXacNhan">
-                                    Tôi xin cam đoan những lời khai trên đây là đúng sự thật và chịu trách nhiệm
-                                    cho những lời khai này.
-                                </label>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="container" style="display: flex;flex-direction: row">
-                        <button class="cancelButton" onclick="clearData()">Cancel</button>
-                        <div style="width: 20px"></div>
-                        <button class="okButton" onclick="saveData()">OK</button>
-                    </div>
-                    <br>
-                    <br>
-                    <br>
-                    <div class="row">
                     <span class="normalText"><span>
                         <i>Ghi chú:</i>
                     </span>
                         <span>Nếu sinh viên thấy thông tin của mình chưa chính xác, xin vui lòng liên hệ phòng Đào tạo để cập nhật lại.</span>
                     </span>
+                        </div>
+
+
                     </div>
-
-
-                </div>
+                </form>
             </td>
         </tr>
         </tbody>

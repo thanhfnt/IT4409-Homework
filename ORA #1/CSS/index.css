@@ -222,7 +222,6 @@ h3 {
 /*--------------------------------------------MainContent*/
 .MainContentTitle {
     padding: 5px;
-    width: 100%;
 }
 
 .MainContentTitle div {
@@ -239,6 +238,7 @@ h3 {
     font-family: 'Times';
     font-size: 16px;
     line-height: 2em;
+    width: 100%;
 }
 
 .container button {
@@ -331,7 +331,7 @@ h3 {
     font-weight: normal;
 }
 
-.inputBox input {
+.inputBox input, select {
     margin-top: 0;
     flex: 1;
     border: 1px solid #cbcbcb;
@@ -350,7 +350,6 @@ hr {
     line-height: 4px;
     border: 3px solid #FF9900;
     display: block;
-    width: 80%;
 }
 
 .center {
