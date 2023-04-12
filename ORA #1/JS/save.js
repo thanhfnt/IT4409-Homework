@@ -55,11 +55,6 @@ function saveData() {
     list_check_key.forEach(key => {
         localStorage.setItem(key, document.getElementById(key).checked);
     })
-    window.open(
-        'index.html',
-        '_self'
-    );
-
 }
 
 function clearData() {

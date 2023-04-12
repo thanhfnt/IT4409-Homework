@@ -810,7 +810,7 @@
             </td>
 
             <td style="width:100%; vertical-align: top; margin:0;padding:10px;">
-                <form action="index.html" onsubmit="saveData()" method="get">
+                <form action="index.html" onsubmit="saveData()" onreset="clearData()" method="get">
                     <div class="MainContentTitle">
                         <div>
                             <span class="Title">CẬP NHẬT THÔNG TIN CÁ NHÂN</span>
@@ -871,7 +871,7 @@
                                     <label for="editLop">Lớp: *</label>
                                 </div>
                                 <div class="inputBox">
-                                    <input id="editLop">
+                                    <input id="editLop" name="editLop">
                                 </div>
                             </div>
                             <div class="rowEdit">
@@ -879,7 +879,7 @@
                                     <label for="editBacDaoTao">Bậc đào tạo: *</label>
                                 </div>
                                 <div class="inputBox">
-                                    <select id="editBacDaoTao">
+                                    <select id="editBacDaoTao" name="editBacDaoTao">
                                         <option>Đại học đại trà</option>
                                         <option>Kỹ sư chính quy</option>
                                         <option>Thạc sĩ khoa học</option>
@@ -891,7 +891,7 @@
                                     <label for="editChuongTrinh">Chương trình: *</label>
                                 </div>
                                 <div class="inputBox">
-                                    <input id="editChuongTrinh">
+                                    <input id="editChuongTrinh" name="editChuongTrinh">
                                 </div>
                             </div>
 
@@ -900,7 +900,7 @@
                                     <label for="editKhoaHoc">Khóa học: *</label>
                                 </div>
                                 <div class="inputBox">
-                                    <select id="editKhoaHoc">
+                                    <select id="editKhoaHoc" name="editKhoaHoc">
                                         <option>61</option>
                                         <option>62</option>
                                         <option>63</option>
@@ -916,7 +916,7 @@
                                     <label for="editKhoaVien">Khoa/Viện quản lý: *</label>
                                 </div>
                                 <div class="inputBox">
-                                    <input id="editKhoaVien">
+                                    <input id="editKhoaVien" name="editKhoaVien">
                                 </div>
                             </div>
 
@@ -925,7 +925,7 @@
                                     <label for="editEmail">Email: *</label>
                                 </div>
                                 <div class="inputBox">
-                                    <input id="editEmail">
+                                    <input id="editEmail" name="editEmail">
                                 </div>
                             </div>
                             <div class="rowEdit">
@@ -933,7 +933,7 @@
                                     <label for="editTinhTrangHocTap">Tình trạng học tập: *</label>
                                 </div>
                                 <div class="inputBox">
-                                    <select id="editTinhTrangHocTap">
+                                    <select id="editTinhTrangHocTap" name="editTinhTrangHocTap">
                                         <option>Học</option>
                                         <option>Nghỉ học</option>
                                         <option>Bảo lưu</option>
@@ -951,7 +951,7 @@
                                     <label for="editDanToc">Dân tộc: *</label>
                                 </div>
                                 <div class="inputBox">
-                                    <input id="editDanToc">
+                                    <input id="editDanToc" name="editDanToc">
                                 </div>
                             </div>
                             <div class="rowEdit">
@@ -959,7 +959,7 @@
                                     <label for="editTonGiao">Tôn giáo: *</label>
                                 </div>
                                 <div class="inputBox">
-                                    <input id="editTonGiao">
+                                    <input id="editTonGiao" name="editTonGiao">
                                 </div>
                             </div>
                             <div class="rowEdit">
@@ -967,7 +967,7 @@
                                     <label for="editNamTotNghiep">Năm TN cấp 3: *</label>
                                 </div>
                                 <div class="inputBox">
-                                    <input id="editNamTotNghiep">
+                                    <input id="editNamTotNghiep" name="editNamTotNghiep">
                                 </div>
                             </div>
                             <div class="rowEdit">
@@ -975,7 +975,7 @@
                                     <label for="editTruongCap3">Trường cấp 3: *</label>
                                 </div>
                                 <div class="inputBox">
-                                    <input id="editTruongCap3">
+                                    <input id="editTruongCap3" name="editTruongCap3">
                                 </div>
                             </div>
                             <div class="rowEdit">
@@ -983,7 +983,7 @@
                                     <label for="editCMND">Số CMND/Hộ chiếu: *</label>
                                 </div>
                                 <div class="inputBox">
-                                    <input id="editCMND">
+                                    <input id="editCMND" name="editCMND">
                                 </div>
                             </div>
                             <div class="rowEdit">
@@ -991,7 +991,7 @@
                                     <label for="editSoDienThoai">Số điện thoại: *</label>
                                 </div>
                                 <div class="inputBox">
-                                    <input id="editSoDienThoai">
+                                    <input id="editSoDienThoai" name="editSoDienThoai">
                                 </div>
                             </div>
                         </div>
@@ -1006,7 +1006,7 @@
                                     <label for="editDiaChiTinh">Tỉnh/Thành phố: *</label>
                                 </div>
                                 <div class="inputBox">
-                                    <input id="editDiaChiTinh" list="diaChiTinhThanhlist">
+                                    <input id="editDiaChiTinh" list="diaChiTinhThanhlist" name="editDiaChiTinh">
                                     <datalist id="diaChiTinhThanhlist">
                                         <option>Thành Phố Hà Nội</option>
                                     </datalist>
@@ -1017,7 +1017,7 @@
                                     <label for="editDiaChiHuyen">Quận/Huyện: *</label>
                                 </div>
                                 <div class="inputBox">
-                                    <input id="editDiaChiHuyen" list="diaChiQuanHuyenlist">
+                                    <input id="editDiaChiHuyen" list="diaChiQuanHuyenlist" name="editDiaChiHuyen">
                                     <datalist id="diaChiQuanHuyenlist">
                                         <option>Quận Hai Bà Trưng</option>
                                     </datalist>
@@ -1028,7 +1028,7 @@
                                     <label for="editDiaChiXa">Xã/Phường/TT: *</label>
                                 </div>
                                 <div class="inputBox">
-                                    <input id="editDiaChiXa" list="diaChiXaPhuonglist">
+                                    <input id="editDiaChiXa" list="diaChiXaPhuonglist" name="editDiaChiXa">
                                     <datalist id="diaChiXaPhuonglist">
                                         <option>Phường Bách Khoa</option>
                                     </datalist>
@@ -1039,7 +1039,7 @@
                                     <label for="editDiaChiNha">Số nhà-đường/thôn: *</label>
                                 </div>
                                 <div class="inputBox">
-                                    <input id="editDiaChiNha">
+                                    <input id="editDiaChiNha" name="editDiaChiNha">
                                 </div>
                             </div>
                         </div>
@@ -1054,7 +1054,7 @@
                                     <label for="editHoKhauTinh">Tỉnh/Thành phố: *</label>
                                 </div>
                                 <div class="inputBox">
-                                    <input id="editHoKhauTinh" list="hoKhauTinhThanhlist">
+                                    <input id="editHoKhauTinh" list="hoKhauTinhThanhlist" name="editHoKhauTinh">
                                     <datalist id="hoKhauTinhThanhlist">
                                         <option>Thành Phố Hà Nội</option>
                                     </datalist>
@@ -1065,7 +1065,7 @@
                                     <label for="editHoKhauHuyen">Quận/Huyện: *</label>
                                 </div>
                                 <div class="inputBox">
-                                    <input id="editHoKhauHuyen" list="hoKhauQuanHuyenlist">
+                                    <input id="editHoKhauHuyen" list="hoKhauQuanHuyenlist" name="editHoKhauHuyen">
                                     <datalist id="hoKhauQuanHuyenlist">
                                         <option>Quận Hai Bà Trưng</option>
                                     </datalist>
@@ -1076,7 +1076,7 @@
                                     <label for="editHoKhauXa">Xã/Phường/TT: *</label>
                                 </div>
                                 <div class="inputBox">
-                                    <input id="editHoKhauXa" list="hoKhauXaPhuonglist">
+                                    <input id="editHoKhauXa" list="hoKhauXaPhuonglist" name="editHoKhauXa">
                                     <datalist id="hoKhauXaPhuonglist">
                                         <option>Phường Bách Khoa</option>
                                     </datalist>
@@ -1087,7 +1087,7 @@
                                     <label for="editHoKhauKhuVuc">Khu vực: *</label>
                                 </div>
                                 <div class="inputBox">
-                                    <input id="editHoKhauKhuVuc" list="hoKhauKhuVucList">
+                                    <input id="editHoKhauKhuVuc" list="hoKhauKhuVucList" name="editHoKhauKhuVuc">
                                     <datalist id="hoKhauKhuVucList">
                                         <option>1</option>
                                         <option>2</option>
@@ -1108,7 +1108,7 @@
                                     <label for="editBoHoTen">Họ và tên: *</label>
                                 </div>
                                 <div class="inputBox">
-                                    <input id="editBoHoTen">
+                                    <input id="editBoHoTen" name="editBoHoTen">
                                 </div>
                             </div>
                             <div class="rowEdit">
@@ -1116,7 +1116,7 @@
                                     <label for="editBoNamSinh">Năm sinh: *</label>
                                 </div>
                                 <div class="inputBox">
-                                    <input id="editBoNamSinh">
+                                    <input id="editBoNamSinh" name="editBoNamSinh">
                                 </div>
                             </div>
                             <div class="rowEdit">
@@ -1124,7 +1124,7 @@
                                     <label for="editBoNgheNghiep">Nghề nghiêp: *</label>
                                 </div>
                                 <div class="inputBox">
-                                    <input id="editBoNgheNghiep">
+                                    <input id="editBoNgheNghiep" name="editBoNgheNghiep">
                                 </div>
                             </div>
                             <div class="rowEdit">
@@ -1132,7 +1132,7 @@
                                     <label for="editBoSDT">Số điện thoại: *</label>
                                 </div>
                                 <div class="inputBox">
-                                    <input id="editBoSDT">
+                                    <input id="editBoSDT" name="editBoSDT">
                                 </div>
                             </div>
                             <div class="rowEdit">
@@ -1140,7 +1140,7 @@
                                     <label for="editBoEmail">Email: *</label>
                                 </div>
                                 <div class="inputBox">
-                                    <input id="editBoEmail">
+                                    <input id="editBoEmail" name="editBoEmail">
                                 </div>
                             </div>
                         </div>
@@ -1155,7 +1155,7 @@
                                     <label for="editMeHoTen">Họ và tên: *</label>
                                 </div>
                                 <div class="inputBox">
-                                    <input id="editMeHoTen">
+                                    <input id="editMeHoTen" name="editMeHoTen">
                                 </div>
                             </div>
                             <div class="rowEdit">
@@ -1163,7 +1163,7 @@
                                     <label for="editMeNamSinh">Năm sinh: *</label>
                                 </div>
                                 <div class="inputBox">
-                                    <input id="editMeNamSinh">
+                                    <input id="editMeNamSinh" name="editMeNamSinh">
                                 </div>
                             </div>
                             <div class="rowEdit">
@@ -1171,7 +1171,7 @@
                                     <label for="editMeNgheNghiep">Nghề nghiêp: *</label>
                                 </div>
                                 <div class="inputBox">
-                                    <input id="editMeNgheNghiep">
+                                    <input id="editMeNgheNghiep" name="editMeNgheNghiep">
                                 </div>
                             </div>
                             <div class="rowEdit">
@@ -1179,7 +1179,7 @@
                                     <label for="editMeSDT">Số điện thoại: *</label>
                                 </div>
                                 <div class="inputBox">
-                                    <input id="editMeSDT">
+                                    <input id="editMeSDT" name="editMeSDT">
                                 </div>
                             </div>
                             <div class="rowEdit">
@@ -1187,13 +1187,13 @@
                                     <label for="editMeEmail">Email: *</label>
                                 </div>
                                 <div class="inputBox">
-                                    <input id="editMeEmail">
+                                    <input id="editMeEmail" name="editMeEmail">
                                 </div>
                             </div>
                         </div>
                         <hr>
                         <div class="container" style="display: flex;flex-direction: row;">
-                            <button class="cancelButton" onclick="clearData()">Cancel</button>
+                            <button class="cancelButton" type="reset">Cancel</button>
                             <div style="width: 20px"></div>
                             <button class="okButton" type="submit">OK</button>
                         </div>
@@ -1207,8 +1207,6 @@
                         <span>Nếu sinh viên thấy thông tin của mình chưa chính xác, xin vui lòng liên hệ phòng Đào tạo để cập nhật lại.</span>
                     </span>
                         </div>
-
-
                     </div>
                 </form>
             </td>
