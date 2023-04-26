@@ -18,36 +18,14 @@ const initObject = {
     'editChuongTrinh': 'Khoa học Máy tính 2020',
     'editKhoaVien': 'Trường Công nghệ Thông tin và Truyền thông',
     'editEmail': 'anh.cvt200010@sis.hust.edu.vn',
-    'editDanToc': 'Kinh',
-    'editTonGiao': 'Không',
-    'editNamTotNghiep': '2020',
-    'editTruongCap3': 'Tạ Quang Bửu',
-    'editCMND': '038***07',
-    'editSoDienThoai': '037***61',
-    'editDiaChiTinh': 'Thành Phố Hà Nội',
-    'editDiaChiHuyen': 'Quận Hai Bà Trưng',
-    'editDiaChiXa': 'Phường Bách Khoa',
-    'editDiaChiNha': '',
-    'editHoKhauTinh': 'Thành Phố Hà Nội',
-    'editHoKhauHuyen': 'Quận Hai Bà Trưng',
-    'editHoKhauXa': 'Phường Bách Khoa',
-    'editBoHoTen': 'Test họ tên bố',
-    'editBoNamSinh': '2020',
-    'editBoNgheNghiep': 'Test nghề nghiệp bố',
-    'editBoSDT': 'Không Có',
-    'editBoEmail': 'Không Có',
-    'editMeHoTen': 'Test họ tên bố',
-    'editMeNamSinh': '2020',
-    'editMeNgheNghiep': 'Test nghề nghiệp bố',
-    'editMeSDT': 'Không Có',
-    'editMeEmail': 'Không Có',
     'editNamVaoTruong': '2020',
     'editBacDaoTao': 'Đại học đại trà',
     'editKhoaHoc': '65',
     'editTinhTrangHocTap': 'Học',
+    'editImageURL': 'Images/usericon.png',
 };
 
-let editObject = initObject
+let editObject = {...initObject}
 
 const list_check_key = ['editSexMale', 'editSexFemale', 'editSexOther'];
 
@@ -65,7 +43,8 @@ function hideSexBox(sex, hidden) {
 
         const subChildren = childrenList.item(i).children
         childrenList.item(i).hidden = hidden;
-        childrenList.item(i).flex = 0;
+        childrenList.item(i).style.width = hidden ? '0px': 'auto';
+        childrenList.item(i).style.flex = hidden ? 0 : 1;
         for (let j = 0; j < subChildren.length; j++) {
             subChildren.item(j).hidden = hidden;
             subChildren.item(j).width = hidden ? '0px' : 'auto';
@@ -77,17 +56,15 @@ function hideSexBox(sex, hidden) {
     switch (sex) {
         case SEX.Male:
             document.getElementById('labelSexMale').hidden = false;
-            document.getElementById('labelSexMale').width = 'auto';
             document.getElementById('editSexMale').checked = true;
             break;
         case SEX.Female:
             document.getElementById('labelSexFemale').hidden = false;
-            document.getElementById('labelSexMale').width = 'auto';
             document.getElementById('editSexFemale').checked = true;
             break;
         default:
             document.getElementById('labelSexOther').hidden = false;
-            document.getElementById('labelSexOther').width = 'auto';
+            document.getElementById('editSexOther').checked = true;
     }
 }
 
@@ -100,9 +77,8 @@ function changeToDetailMode() {
     });
     hideActionBox(true);
     hideSexBox(editObject.editSex, true);
-    // TODO: Hidden upload image
-    document.getElementById('uploadImg').display = 'none';
-    console.log(document.getElementById('uploadImg').display);
+    document.getElementById('uploadImg').style.opacity = 0;
+    document.getElementById('uploadImg').disabled = true;
 }
 
 function changeToEditMode() {
@@ -114,7 +90,8 @@ function changeToEditMode() {
     });
     hideActionBox(false);
     hideSexBox(editObject.editSex, false);
-    document.getElementById('uploadImg').hidden = false;
+    document.getElementById('uploadImg').style.opacity = 100;
+    document.getElementById('uploadImg').disabled = false;
 }
 
 function onLoadPage() {
@@ -136,6 +113,8 @@ function loadData() {
     } else {
         document.getElementById('editSexOther').checked = true;
     }
+    document.getElementById('editImage').src = editObject.editImageURL;
+    document.getElementById('uploadImg').value = "";
 }
 
 function saveData() {
@@ -152,22 +131,24 @@ function saveData() {
     } else {
         editObject.editSex = 'Khác';
     }
+    if (document.getElementById('uploadImg').value !== "") {
+        editObject.editImageURL = URL.createObjectURL(document.getElementById('uploadImg').files[0]);
+        document.getElementById('uploadImg').value = "";
+        document.getElementById('editImage').src = editObject.editImageURL;
+    }
     changeToDetailMode();
-    console.log("OK action");
-    console.log(editObject);
+    console.log("OK action:", editObject);
 }
 
 function cancelEdit() {
     loadData();
     changeToDetailMode();
-    console.log("Cancel action");
-    console.log(editObject);
+    console.log("Cancel action:", editObject);
 }
 
 function resetData() {
-    editObject = initObject;
+    editObject = {...initObject};
     loadData();
-    console.log("Reset action");
-    console.log(editObject);
+    console.log("Reset action:", editObject);
 }
 

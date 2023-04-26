@@ -326,7 +326,7 @@ h3 {
     flex: 1;
 }
 
-.inputBox input, select {
+.inputBox input, .inputBox select {
     height: auto;
     width:100%;
     max-width: initial;
@@ -340,7 +340,7 @@ h3 {
     line-height: initial;
 }
 
-.inputBox input:disabled, select:disabled {
+.inputBox input:disabled, .inputBox select:disabled {
     border: none;
     background-color: white;
     color: black;
@@ -356,9 +356,10 @@ h3 {
     line-height: normal !important;
 }
 
-.inputBox .radioBox label, input {
+.inputBox  .radioBox  label, .inputBox  .radioBox input {
     width: auto !important;
     margin-bottom: 0;
+    padding-top: 5px;
 }
 
 #actionBox {
