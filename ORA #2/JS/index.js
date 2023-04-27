@@ -47,7 +47,7 @@ function hideSexBox(sex, hidden) {
         childrenList.item(i).style.flex = hidden ? 0 : 1;
         for (let j = 0; j < subChildren.length; j++) {
             subChildren.item(j).hidden = hidden;
-            subChildren.item(j).width = hidden ? '0px' : 'auto';
+            subChildren.item(j).style.width = hidden ? '0px' : 'auto';
         }
     }
     list_check_key.forEach(key => {
