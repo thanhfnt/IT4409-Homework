@@ -152,3 +152,7 @@ function resetData() {
     console.log("Reset action:", editObject);
 }
 
+function changeImage() {
+    document.getElementById('editImage').src = URL.createObjectURL(
+        document.getElementById('uploadImg').files[0]);
+}
