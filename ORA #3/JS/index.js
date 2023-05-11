@@ -84,7 +84,7 @@ function createItem(parent, inputType) {
     const inputBox = createInputBox(inputType);
     const deleteButton = createButton('Images/delete-button-icon.svg');
     deleteButton.onclick = (event) => {
-        if (window.confirm(`Bạn có chắc chắn xóa trường thông tin: ${
+        if (window.confirm(`Cao Văn Thế Anh_20200010 \nBạn có chắc chắn xóa trường thông tin: ${
             labelBox.children[0].value} hay không?`))
             parent.removeChild(rowEdit);
     }
@@ -171,7 +171,7 @@ function addNewGroupItem() {
     groupBox.appendChild(inTittleBox);
     inTittleBox.appendChild(inTittle);
     deleteButton.onclick = () => {
-        if (window.confirm(`Bạn có chắc chắn xóa nhóm thông tin: ${
+        if (window.confirm(`Cao Văn Thế Anh_20200010 \nBạn có chắc chắn xóa nhóm thông tin: ${
             labelBox.children[0].value} hay không?`))
             document.getElementById('mainContent').removeChild(groupBox.parentNode);
     }
